@@ -1,0 +1,565 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.yi{
+    width: 100%;
+    height: 600px;
+    /*border: 1px black solid;*/
+    /*margin-top: 200px;*/
+    position: relative;
+    top: 80px;
+    /*z-index: 0;*/
+}
+.lun1{
+    width: 700px;
+    height: 500px;
+    /*border-bottom: 1px black solid;*/
+    position: absolute;
+    left: 8%;
+}
+/*轮播图*/
+.all{
+    width: 700px;
+    height: auto;
+    /*margin: 60px auto;*/
+    overflow: hidden;
+}
+.top-img{
+    width: 700px;
+    height: auto;
+    font-size: 0;
+    position: relative;
+}
+.activeimg{
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+}
+.top-img .activeimg .yiEr{
+    width: 700px;
+    height: 500px;
+    display: inline-block;
+    text-align: center;
+    line-height: 500px;
+}
+.top-img .activeimg .yiEr img{
+    width: 50%;
+    /*object-fit: contain;*/
+    /*margin-left: 29%;*/
+    /*height: 500px;*/
+}
+/*左右箭头*/
+.top-img .left{
+    width: 80px;
+    height: 500px;
+    background: rgba(0,0,0,0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 500px;
+    cursor: pointer;
+}
+.top-img .right{
+    width: 80px;
+    height: 500px;
+    background: rgba(0,0,0,0);
+    position: absolute;
+    left:620px;
+    top: 0;
+    text-align: center;
+    line-height: 500px;
+    cursor: pointer;
+}
+.all:hover .left{
+    background: rgba(151, 151, 144, 0.1);
+    /*left: 0;*/
+    transition: all .3s linear;
+}
+.all:hover .right{
+    background: rgba(151, 151, 144, 0.1);
+    /*left: 620px;*/
+    transition: all .3s linear;
+}
+/*.top-img .left:hover,.top-img .right:hover{*/
+    /*background: rgba(0,0,0,0.1);*/
+/*}*/
+/*小图*/
+.bot-img{
+    height: 90px;
+    width: 500px;
+    margin-top: 20px;
+}
+.bot-img ul{
+    width: 100%;
+    height: 100px;
+}
+.bot-img ul li{
+    width: 90px;
+    /*height: 100px;*/
+    /*margin-right: 10px;*/
+    float: left;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-size: 0;
+}
+.bot-img ul li.active{
+    border-top: 3px solid black;
+    transition: all .1s linear;
+}
+.bot-img ul li img{
+    width: 100%;
+    height: 90px;
+}
+.bot-img ul li:last-child{
+    margin-right: 0;
+}
+/*文字*/
+.wen1{
+    font-size: 14px;
+    width: 400px;
+    height: 500px;
+    /*border: 1px blue solid;*/
+    position: absolute;
+    right: 5%;
+}
+.xian1{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px black solid;
+}
+.color1{
+    width: 140px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    top: 340px;
+}
+.ju{
+    text-align: center;
+}
+.color1:hover{
+    /*background-color: rgb(0,140,168);*/
+    cursor: pointer;
+}
+.butHoverCss{
+    --color: #fff;
+    --hover: rgb(0,140,168);
+}
+.butHoverCss:hover, .butHoverCss:focus {
+    border-color: var(--hover);
+    color: #fff;
+    box-shadow: inset 11em 0 0 0 var(--hover);
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+/*尺寸*/
+.pai{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+}
+.pai1{
+    position: absolute;
+    left: 0;
+}
+.pai2{
+    position: absolute;
+    left: 10%;
+}
+.pai3{
+    position: absolute;
+    left: 40%;
+}
+.pai4{
+    position: absolute;
+    left: 50%;
+}
+.hua{
+    font-size:14px;
+    Text-decoration:underline;
+}
+.hua:hover{
+    color: rgb(0,140,168);
+    cursor: pointer;
+}
+.da{
+    font-size: 13px;
+}
+.form-control{
+    width: 100px!important;
+}
+.ku1{
+    width: 570px!important;
+    height: 45px!important;
+    padding-left: 15px!important;
+}
+textarea{
+    padding-left: 15px!important;
+}
+/*提交评论*/
+.btn{
+    width: 80px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    margin-right: 250px;
+    border-radius:0;
+}
+/*技术规格*/
+.color2{
+    width: 340px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    left: 40%;
+}
+/*第二部分
+技术规格*/
+.er{
+    width: 100%;
+    height: 340px;
+    /*border: 1px black solid;*/
+    /*margin-top: 200px;*/
+    position: relative;
+    top: 220px;
+}
+.xian2{
+     width: 100px;
+     height: 40px;
+     text-align: center;
+     line-height: 40px;
+     border-bottom: 2px rgb(0,140,168) solid;
+     position: absolute;
+     left: 48%;
+     top: 120px;
+ }
+table{
+    position: absolute;
+    top: 220px;
+    left: 18%;
+}
+td{
+    width: 350px;
+    height: 40px;
+}
+.xian3{
+    width: 80%;
+    height: 40px;
+    border-bottom: 1px rgba(0,0,0,0.2) solid;
+    position: absolute;
+    top: 340px;
+    left: 12%;
+}
+/*第三部分*/
+.san{
+    width: 100%;
+    height: 400px;
+    /*border: 1px black solid;*/
+    /*margin-top: 200px;*/
+    position: relative;
+    top: 220px;
+}
+.zhi{
+    position: absolute;
+    top: 220px;
+    left: 35%;
+}
+.zhi1{
+    width: 220px;
+    height: 170px;
+}
+.zhi2{
+    width: 220px;
+    height: 170px;
+}
+.xian4{
+    width: 80%;
+    height: 40px;
+    border-bottom: 1px rgba(0,0,0,0.2) solid;
+    position: absolute;
+    top: 400px;
+    left: 12%;
+}
+/*第四部分*/
+/*.si{*/
+    /*width: 100%;*/
+    /*height: 400px;*/
+    /*!*border: 1px black solid;*!*/
+    /*!*margin-top: 200px;*!*/
+    /*position: relative;*/
+    /*top: 220px;*/
+/*}*/
+/*.zi1{*/
+    /*position: absolute;*/
+    /*top: 250px;*/
+    /*left: 10%;*/
+/*}*/
+/*.zhi4{*/
+    /*width: 600px;*/
+    /*height: 1400px;*/
+    /*position: absolute;*/
+    /*top: 300px;*/
+    /*left: 35%;*/
+/*}*/
+/*.xian5{*/
+    /*width: 1200px;*/
+    /*height: 40px;*/
+    /*border-bottom: 1px rgba(0,0,0,0.2) solid;*/
+    /*position: absolute;*/
+    /*top: 370px;*/
+    /*left: 12%;*/
+/*}*/
+/*第五部分*/
+.wu{
+    width: 100%;
+    height: 680px;
+    /*border: 1px black solid;*/
+    /*margin-top: 200px;*/
+    position: relative;
+    top: 220px;
+}
+.bei1{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    position: absolute;
+    top: 250px;
+    left: 5%;
+}
+.wirte {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    font-size: 80px!important;
+    color: #fff!important;
+    position: absolute;
+    left: 160px;
+    top: 50px;
+}
+.bei11{
+    width: 400px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    Text-decoration:underline;
+    position: absolute;
+    top: 180px;
+}
+.bei12{
+    width: 400px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    Text-decoration:underline;
+    position: absolute;
+    top: 220px;
+}
+.bei1:hover .bei11{
+    Text-decoration:none;
+}
+.bei1:hover .bei12{
+    Text-decoration:none;
+}
+.bei1:hover .bei13{
+    Text-decoration:none;
+}
+.bei1:hover .bei14{
+    Text-decoration:none;
+}
+.bei2{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    position: absolute;
+    top: 250px;
+    left: 35%;
+}
+.bei2:hover .bei11{
+    Text-decoration:none;
+}
+.bei2:hover .bei12{
+    Text-decoration:none;
+}
+.bei2:hover .bei13{
+    Text-decoration:none;
+}
+.bei3{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    position: absolute;
+    top: 250px;
+    left: 65%;
+}
+.bei13{
+    width: 400px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    Text-decoration:underline;
+    position: absolute;
+    top: 260px;
+}
+.bei14{
+    width: 400px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    Text-decoration:underline;
+    position: absolute;
+    top: 280px;
+}
+.bei3:hover .bei11{
+    Text-decoration:none;
+}
+.bei3:hover .bei12{
+    Text-decoration:none;
+}
+.bei3:hover .bei13{
+    Text-decoration:none;
+}
+.bei3:hover .bei14{
+    Text-decoration:none;
+}
+.xian6{
+    width: 80%;
+    height: 40px;
+    border-bottom: 1px rgba(0,0,0,0.2) solid;
+    position: absolute;
+    top: 700px;
+    left: 12%;
+}
+.bei1:hover{
+    cursor: pointer;
+}
+.bei2{
+    cursor: pointer;
+}
+.bei3{
+    cursor: pointer;
+}
+/*第六部分*/
+.liu{
+    width: 100%;
+    height: 550px;
+    /*border: 1px black solid;*/
+    position: relative;
+    top: 220px;
+}
+.xian10{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 2px rgb(0,140,168) solid;
+    margin-top: 150px;
+    margin-left: 48%;
+}
+.goodsList{
+    margin-top: 50px;
+    margin-left: 10%;
+}
+.qi{
+    position: relative;
+    top: 220px;
+}
+/*section{*/
+    /*margin-top: 150px;*/
+    /*margin-bottom: 0;*/
+/*}*/
+/*相关产品*/
+.goodsList li {
+    float: left;
+    width: 30%;
+    /*background: #2aabd2;*/
+    margin-right: 10px;
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+    /*height: 337px;*/
+}
+.img {
+    /*margin:0 auto 15px;*/
+    margin-bottom: 10px;
+
+
+
+}
+
+.img img {
+    width: 234px;
+    /*width: 80%;*/
+    height: 250px;
+    /*height: auto;*/
+    object-fit: contain;
+
+    border: 0;
+
+}
+
+.goodsList hr {
+    width: 60%;
+    /*display: inline-block;*/
+    margin: 0 auto 10px;
+    height: 1px;
+    background-color: #D0D0D0;
+    opacity: 0.35;
+}
+
+.copy-xsmall {
+    color: #444;;
+}
+
+.copy-xsize {
+    font-size: 10px;
+}
+
+
+
+.fontColor {
+    color: #1f1d1d;
+    cursor: pointer;
+}
+
+.fontColor:hover {
+    color: #008ca8;
+}
+
+
+.active {
+    border: none;
+    transition: box-shadow 0.25s ease-in-out;
+    margin-bottom: 20px;
+
+}
+.active:hover {
+    box-shadow: 0 0 8px 0 #666666;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: white;
+}
+.shou{
+    color: black;
+}
+.shou:hover{
+    color: black;
+}
+.sXin{
+    cursor: pointer;
+}

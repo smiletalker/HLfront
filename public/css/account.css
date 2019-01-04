@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px;
+}
+/*左浮动*/
+.floatL{
+    float: left;
+}
+/*右浮动*/
+.floatR{
+    float: right;
+}
+/*字体间距*/
+.letter{
+    letter-spacing: 2px;
+}
+input{
+    padding-left: 30px;
+}
+/*账户信息中心*/
+/*个人中心*/
+.myCenter{
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 120px;
+    position: relative;
+    z-index: 1;
+}
+/*左侧菜单*/
+.leftMenu{
+    width: 20%;
+    height: 280px;
+    /*outline: 1px solid green;*/
+    background-color: rgb(245,245,245);
+    color: black;
+    margin-bottom: 100px;
+}
+.leftMenu>ul>li{
+    /*outline: 1px solid green;*/
+    height: 35px;
+    line-height: 16px;
+}
+.leftMenu>ul>li:nth-of-type(1){
+    padding-left: 5%;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+}
+.leftMenu a{
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+/*左侧菜单被点击后的样式*/
+.menuClicked{
+    color: white!important;
+    background-color:#008ca8!important;
+    border-radius: 0;
+}
+/*右边盒子*/
+.rightBox{
+    width: 75%;
+    padding-bottom: 100px;
+}
+/*右边盒子标题*/
+.myTitle{
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+.msg{
+    width: 100%;
+    height: 210px;
+    /*outline: 1px solid darkblue;*/
+    margin-bottom: 20px;
+}
+/*账户信息、收货地址*/
+.msg>p{
+    width: 100%;
+    font-size: 24px;
+    border-bottom: 1px solid #ece3e3;
+    padding-bottom: 3px;
+}
+.msgTopL,.msgTopR{
+    width: 50%;
+    height: 160px;
+    /*outline: 1px solid darkorange;*/
+}
+.msg>div>span{
+    width: 100%;
+    line-height: 25px;
+    /*outline: 1px solid darkorange;*/
+}
+.msg>div>span:nth-of-type(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.msg>div>a{
+    color: black;
+    margin-top: 15px;
+    margin-right: 15px;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.msgTop>div>a:hover{
+    color: #008ca8;
+}
+
+
+
+
+/*地址管理*/
+.myAddr{
+    /*outline: 1px solid red;*/
+    margin-bottom: 10px;
+}
+.myMsgInput>div{
+    float: left;
+    width: 100%;
+}
+.myMsgInput>div>select{
+    width: 10%;
+}
+/*地址信息*/
+.addAddr{
+    font-size: 12px;
+    color: black;
+    text-decoration: underline;
+}
+.addAddr:hover{
+    color: black;
+}
+.getAddr{
+    width: 100%;
+    /*outline: 1px solid green;*/
+    height: 22px;/*80px*/
+    overflow: hidden;
+    transition: height .3s linear;
+    margin-bottom: 7px;
+}
+.getAddr>span{
+    margin-bottom: 8px;
+}
+.getAddr>span:nth-of-type(1){
+    width: 10%;
+    color: rgb(0,140,168);
+}
+.getAddr>span:nth-of-type(2){
+    width: 60%;
+    /*outline: 1px solid saddlebrown;*/
+}
+.getAddr>span:nth-of-type(3){
+    font-size: 18px;
+    width: 3%;
+    text-align: center;
+    line-height: 22px;
+    cursor: pointer;
+    /*outline: 1px solid saddlebrown;*/
+    margin-left: 8px;
+}
+.getAddr>a{
+    width: 30px;
+    /*outline: 1px solid saddlebrown;*/
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+    margin-left: 15px;
+    line-height: 22px;
+    font-size: 12px;
+}
+.getAddr>span:nth-of-type(4),
+.getAddr>span:nth-of-type(5){
+    width: 100%;
+    padding-left: 10%;
+}
+
+/*地址编辑按钮*/
+.getAddr>p{
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+}
+.getAddr>p:hover{
+    background-color: white;
+    text-decoration: underline;
+}
+.getAddr>p:active{
+    background-color: white!important;
+    box-shadow: 0 0 0 0 white;
+}
+
+/*修改地址模态框中的样式*/
+.modalEmail{
+    /*outline: red 1px solid;*/
+}
+.modalEmail>div{
+    width: 100%;
+    height: 85px;
+    /*outline: rebeccapurple 1px solid;*/
+    margin-bottom: 10px;
+}
+.modalEmail>div>label{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.modalEmail>div>input{
+    width: 60%;
+    height: 45px;
+    padding-left: 15px;
+}
+.modalEmail>div>input:focus{
+    outline: none;
+}
+.modalEmail>div>span{
+    line-height: 45px;
+    margin-left: 15px;
+}
+.modal-footer>button{
+    width: 80px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+/*按钮hover样式*/
+.butHoverCss{
+    --color: #fff;
+    --hover: rgb(0,140,168);
+}
+.butHoverCss:hover,.butHoverCss:focus {
+    border-color: var(--hover);
+    color: #fff;
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+.redSpan{
+    float: left;
+    margin-left: 5%;
+    line-height: 45px;
+    color: red;
+    font-size: 14px;
+}
+.greenSpan{
+    float: left;
+    margin-left: 5%;
+    line-height: 45px;
+    color: green;
+    font-size: 24px;
+}
+
+
+
+

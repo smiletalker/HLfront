@@ -1,0 +1,72 @@
+/*订单详情页*/
+table{
+    text-align: center;
+    width: 95%;
+    margin-bottom: 60px;
+}
+table a{
+    /*outline: 1px solid green;*/
+    width: 100%;
+}
+table img{
+    /*height: 35%;*/
+    width: 70%;
+}
+.trHead{
+    background-color: #f3f3f3;
+    padding: 5px 0;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.goodsDec{
+    font-size: 12px;
+}
+.delete{
+    font-weight: lighter;
+    cursor: pointer;
+}
+.buttonD{
+    width: 100px;
+    height: 40px;
+    background: black;
+    border: none;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 89%;
+    /*margin-right: 11%;*/
+}
+.buttonC{
+    width: 30px;
+    height: 25px;
+    background: #ffffff;
+    border: none;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.buttonC:hover{
+    text-decoration: underline;
+}
+.buttonC:focus{
+    outline: none;
+}
+.butHoverCss{
+    --color: #fff;
+    --hover: rgb(0,140,168);
+}
+.butHoverCss:hover, .butHoverCss:focus {
+    border-color: var(--hover);
+    color: #fff;
+    box-shadow: inset 22em 0 0 0 var(--hover);
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 1s;
+}
+
+/*模态框*/
+.modalText>table{
+    width: 100%;
+}

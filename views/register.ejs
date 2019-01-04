@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新用户注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+</head>
+<body>
+<!--头部-->
+<%-include('common/header.ejs')%>
+
+<!--注册-->
+<section class="register">
+    <div class="personalMsg">
+        <p>用户注册</p>
+        <div class="msgInput">
+            <form action="#">
+                <!--用户名-->
+                <div>
+                    <label for="userName" class="floatL letter">用户名</label>
+                    <input type="text" class="floatL letter" id="userName" name="userName" onblur="checkName(this,'请填写您的用户名')" placeholder="请输入您的用户名">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--联系方式-->
+                <div>
+                    <label for="userPhnoe" class="floatL letter">联系方式</label>
+                    <input type="text" class="floatL letter" id="userPhnoe" name="userPhnoe" onblur="checkPhone(this,'请填写您的联系方式')" placeholder="请输入您的联系方式">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--电子邮件-->
+                <div>
+                    <label for="userEmail" class="floatL letter">电子邮件</label>
+                    <input type="text" class="floatL letter" id="userEmail" name="userEmail" onblur="checkEmail(this,'请填写您的电子邮件地址')" placeholder="请输入您的电子邮件地址">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--密码-->
+                <div>
+                    <label for="userPwd" class="floatL letter">密码</label>
+                    <input type="password" class="floatL letter" id="userPwd" name="userPwd" onblur="checkPwd(this,'请填写您的密码')" placeholder="请输入您的密码">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--确认密码-->
+                <div>
+                    <label for="surePwd" class="floatL letter">确认密码</label>
+                    <input type="password" class="floatL letter" id="surePwd" name="surePwd" onblur="checkSurePwd(this,'请再次输入您的密码')" placeholder="请再次输入您的密码">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--记住我-->
+                <div class="remember">
+                    <input type="checkbox" class="letter" id="box" name="box" checked="checked">
+                    <label for="box" class="letter">记住我</label>
+                    <span  class="letter" title="即使您未登录，也请选中'记住我'以访问此计算机上的购物车。">这是什么？</span>
+                </div>
+                <div>
+                    <label for="surePwd" class="floatL letter">验证码</label>
+                    <input type="text" class="floatL letter" id="verifyCode" name="verifyCode" onblur="checkVCode(this,'请填写验证码')" placeholder="请输入验证码">
+                    <div class="floatL letter verifyCode">
+                        <i>25a8</i>
+                    </div>
+                    <span class="floatL letter"></span>
+                    <button type="button" class="mySubmit butHoverCss floatL" id="refreshCode" onclick="refreshMyCode()">刷新</button>
+                </div>
+                <div class="subBut">
+                    <button type="button" class="mySubmit butHoverCss floatL" onclick="reLogin()">创建一个账户</button>
+                    <a href="login.html" class="floatL returnBack">返回</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/register.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+</body>
+</html>

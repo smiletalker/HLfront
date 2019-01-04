@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/accountMsg.css">
+</head>
+<body>
+<!--头部-->
+<%-include('common/header.ejs')%>
+
+<!--个人中心-->
+<div class="myCenter floatL myMsg">
+    <%-include('common/accountMenuCommon.ejs')%>
+    <div class="rightBox floatR">
+        <p class="myTitle letter">账户信息</p>
+        <div id="msg">
+            <form action="#">
+                <!--名字输入框-->
+                <div class="myMsgInput">
+                    <label class="floatL letter" for="msgName">用户名</label>
+                    <input type="text" class="floatL letter" id="msgName" name="msgName" onblur="checkName(this,'请填写您的用户名')" placeholder="请输入您的名字">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--联系方式输入框-->
+                <div class="myMsgInput">
+                    <label class="floatL letter" for="msgPhone">联系方式</label>
+                    <input type="text" class="floatL letter" id="msgPhone" name="msgPhone" onblur="checkPhone(this,'请填写您的联系方式')" placeholder="请输入您的联系方式">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--更改电子邮件、更改密码checkbox-->
+                <div class="myMsgInput">
+                    <div class="remember">
+                        <input type="checkbox" id="upEmail" name="emailBox">
+                        <label for="upEmail">更改电子邮件</label>
+                        <br>
+                        <input type="checkbox" id="upPwd" name="pwdBox">
+                        <label for="upPwd">更改密码</label>
+                    </div>
+                </div>
+
+                <!--更改电子邮件或者密码-->
+                <div class="upEmail">
+                    <p id="upEmailTitle"></p>
+                    <div class="floatL email">
+                        <label class="floatL letter" for="upMyEmail">电子邮件</label>
+                        <input type="text" class="floatL letter" id="upMyEmail" name="upMyEmail" onblur="checkEmail(this,'请填写您的电子邮件地址')" placeholder="请输入您新的电子邮件地址">
+                        <span class="floatL letter"></span>
+                    </div>
+                    <div class="floatL password">
+                        <label class="floatL letter" for="upMyOldPwd">当前密码</label>
+                        <input type="password" class="floatL letter" id="upMyOldPwd" name="userPwd" onblur="checkPwd(this,'请填写您的密码')" placeholder="请输入您的密码">
+                        <span class="floatL letter"></span>
+                    </div>
+                    <div class="floatL  password">
+                        <label class="floatL letter" for="upMyNewPwd">新密码</label>
+                        <input type="password" class="floatL letter" id="upMyNewPwd" name="upMyNewPwd" onblur="checkNewPwd(this,'请填写您的新密码')" placeholder="请输入您新的密码">
+                        <span class="floatL letter"></span>
+                    </div>
+                    <div class="floatL  password">
+                        <label class="floatL letter" for="sureMyNewPwd">确认密码</label>
+                        <input type="password" class="floatL letter" id="sureMyNewPwd" name="sureMyNewPwd" onblur="checkSureNewPwd(this,'请再次输入您的密码')" placeholder="请确认您的密码">
+                        <span class="floatL letter"></span>
+                    </div>
+                </div>
+
+                <button type="button" class="letter butEmail butHoverCss toAccount" onclick="sendMsg()">提交</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/account.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script src="../js/accountMsg.js"></script>
+<script>
+    // $(".toAccount").click(function () {
+    //     location.href="account.html#accountMsg";
+    // });
+    $(function () {
+        // console.log(location.search.split("=")[1]);
+        $("#upPwd").prop("checked",location.search.split("=")[1]);
+        if ($("#upPwd").prop("checked") == true) {
+            $("#upEmailTitle").html("更改密码");
+            $(".password").css("display","block");
+            $("#upEmailTitle").css("display","block");
+        }
+        // console.log($("#upPwd").prop("checked"));
+
+        /*将用户名和邮件的值放在输入框内*/
+        $("#msgName").val(sessionStorage.getItem("myUserName"));
+        $("#msgPhone").val(sessionStorage.getItem("myUserPhone"));
+
+        /*/!*存储一下修改前的用户名和联系方式*!/
+        $("#msgName").attr("oldValue",$("#msgName").val());
+        $("#msgPhone").attr("oldValue",$("#msgPhone").val());*/
+
+    })
+
+    /*判断要修改的数据是哪些？*/
+    function sendMsg() {
+        if ($("#upPwd").prop("checked") == true && $("#upEmail").prop("checked") == false) {
+            console.log("更改密码");
+            $("#msgName").val();
+            $("#msgPhone").val();
+            $("#upMyNewPwd").val();
+            $("#upMyOldPwd").val();
+            if ($("#upMyNewPwd").val() == $("#upMyOldPwd").val()) {
+                $("#upMyNewPwd").val("");
+                $("#upMyOldPwd").val("");
+            }else {
+                $.ajax({
+                    type:"POST",
+                    url:"/updateMsg.do",
+                    data:{
+                        msgTypeId:"1",
+                        msgName:$("#msgName").val(),
+                        msgPhone:$("#msgPhone").val(),
+                        upMyNewPwd:$("#upMyNewPwd").val()
+                    }
+                });
+            }
+
+
+        }
+        if ($("#upEmail").prop("checked") == true && $("#upPwd").prop("checked") == false) {
+            console.log("更改邮件");
+            $("#msgName").val();
+            $("#msgPhone").val();
+            $("#upMyEmail").val();
+            $.ajax({
+                type:"POST",
+                url:"/updateMsg.do",
+                data:{
+                    msgTypeId:"2",
+                    msgName:$("#msgName").val(),
+                    upMyEmail:$("#upMyEmail").val(),
+                    msgPhone:$("#msgPhone").val()
+                }
+            });
+        }
+        if ($("#upPwd").prop("checked") == true && $("#upEmail").prop("checked") == true) {
+            console.log("更改邮件和密码");
+            $("#msgName").val();
+            $("#msgPhone").val();
+            $.ajax({
+                type:"POST",
+                url:"/updateMsg.do",
+                data:{
+                    msgTypeId:"3",
+                    msgName:$("#msgName").val(),
+                    upMyEmail:$("#upMyEmail").val(),
+                    upMyNewPwd:$("#upMyNewPwd").val(),
+                    msgPhone:$("#msgPhone").val()
+                }
+            });
+        }
+        if ($("#upPwd").prop("checked") == false && $("#upEmail").prop("checked") == false) {
+            console.log("更改用户名和联系方式");
+            $("#msgName").val();
+            $("#msgPhone").val();
+            $.ajax({
+                type:"POST",
+                url:"/updateMsg.do",
+                data:{
+                    msgTypeId:"4",
+                    msgName:$("#msgName").val(),
+                    msgPhone:$("#msgPhone").val()
+                }
+            });
+        }
+    }
+
+</script>
+</body>
+</html>

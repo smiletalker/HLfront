@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高山跑步</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/pYan.css">
+
+</head>
+<body>
+<!--页头-->
+<%-include('common/header.ejs')%>
+<!--页头结束-->
+
+<!--内容-->
+<section class="clearfix">
+
+    <!--筛选列表-->
+    <div class="list">
+        <ul>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span >分类</span><span class="iconfont right">-</span>
+                </div>
+                <ul class="listSub">
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check1"><label for="check1">运动服</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check2"><label for="check2">腰包</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check3"><label for="check3">发带</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check4"><label for="check4">跑鞋</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check6"><label for="check6">快速包装</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check7"><label for="check7">健身房</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check8"><label for="check8">多运动</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check9"><label for="check9">运动</label>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <input type="checkbox" id="check10"><label for="check10">繁体</label>
+                        </a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>性别</span><span class="iconfont right">-</span>
+                </div>
+                <ul class="listSub">
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check11"><label for="check11">男装</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check12"><label for="check12">女士的</label>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>价钱</span><span class="iconfont right">-</span>
+                </div>
+            </li>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>主要材料</span><span class="iconfont right">-</span>
+                </div>
+                <ul class="listSub">
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check13"><label for="check13">聚碳酸酯</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check14"><label for="check14">ABS+PC EPS</label>
+                        </a>
+                    </li>
+                </ul>
+            </li >
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>颜色系列</span><span class="iconfont right">-</span>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <!--商品列表-->
+    <div class="goods">
+        <div class="goodsBottom">
+            <div class="ab">
+                <p class="goodsOder">排序方式:&nbsp;<span class="tHuan">位置</span>&nbsp;<span class="iconfont">&#xe61b;</span> </p>
+                <a href="#">DESC</a>
+                <ul class="seat">
+                    <li>位置</li>
+                    <li>产品名称</li>
+                    <li>价钱</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--运动服-->
+        <div class="more" id="paoBuFu">
+            <a href="#">运动服</a>
+            <a href="#"  data-toggle="modal" data-target="#tKui">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive">
+                    <a href="pbydf.html">
+                        <div class="img">
+                            <img src="../images/run/yDongFu/2.png" alt="">
+                        </div>
+                        <p class="fontColor">运动服</p>
+                        <hr>
+                        <p class="copy-xsmall">￥900.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbydf.html">
+                        <div class="img">
+                            <img src="../images/run/yDongFu/4.jpg" alt="">
+                        </div>
+                        <p class="fontColor">运动服</p>
+                        <hr>
+                        <p class="copy-xsmall">￥900.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbydf.html">
+                        <div class="img">
+                            <img src="../images/run/yDongFu/5.jpg" alt="">
+                        </div>
+                        <p class="fontColor">运动服</p>
+                        <hr>
+                        <p class="copy-xsmall">￥900.00</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+        <!--腰包-->
+        <div class="more" id="paoBuBao">
+            <a href="#">腰包</a>
+            <a href="#" data-toggle="modal" data-target="#aQuanSuo">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive">
+                    <a href="pbbao.html">
+                        <div class="img">
+                            <img src="../images/run/yBao/1.png" alt="">
+                        </div>
+                        <p class="fontColor">腰包</p>
+                        <hr>
+                        <p class="copy-xsmall">￥600.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbbao.html">
+                        <div class="img">
+                            <img src="../images/run/yBao/2.png" alt="">
+                        </div>
+                        <p class="fontColor">腰包</p>
+                        <hr>
+                        <p class="copy-xsmall">￥600.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbbao.html">
+                        <div class="img">
+                            <img src="../images/run/yBao/3.png" alt="">
+                        </div>
+                        <p class="fontColor">腰包</p>
+                        <hr>
+                        <p class="copy-xsmall">￥600.00</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+        <!--发带-->
+        <div class="more" id="paoBuDai">
+            <a href="#">发带</a>
+            <a href="#" data-toggle="modal" data-target="#aQuanDai">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive">
+                    <a href="pbfdai.html">
+                        <div class="img">
+                            <img src="../images/run/fDai/4.png" alt="">
+                        </div>
+                        <p class="fontColor">发带</p>
+                        <hr>
+                        <p class="copy-xsmall">￥800.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbfdai.html">
+                        <div class="img">
+                            <img src="../images/run/fDai/2.png" alt="">
+                        </div>
+                        <p class="fontColor">发带</p>
+                        <hr>
+                        <p class="copy-xsmall">￥800.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbfdai.html">
+                        <div class="img">
+                            <img src="../images/run/fDai/3.png" alt="">
+                        </div>
+                        <p class="fontColor">发带</p>
+                        <hr>
+                        <p class="copy-xsmall">￥800.00</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+        <!--跑鞋-->
+        <div class="more" id="paoBuXie">
+            <a href="#">跑鞋</a>
+            <a href="#" data-toggle="modal" data-target="#pYanXie">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive">
+                    <a href="pbxie.html">
+                        <div class="img">
+                            <img src="../images/run/pXie/1.png" alt="">
+                        </div>
+                        <p class="fontColor">跑鞋</p>
+                        <hr>
+                        <p class="copy-xsmall">￥2500.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbxie.html">
+                        <div class="img">
+                            <img src="../images/run/pXie/2.png" alt="">
+                        </div>
+                        <p class="fontColor">跑鞋</p>
+                        <hr>
+                        <p class="copy-xsmall">￥2500.00</p>
+                    </a>
+                </li>
+                <li class="active textActive">
+                    <a href="pbxie.html">
+                        <div class="img">
+                            <img src="../images/run/pXie/3.png" alt="">
+                        </div>
+                        <p class="fontColor">跑鞋</p>
+                        <hr>
+                        <p class="copy-xsmall">￥2500.00</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!--内容结束-->
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<!--尾部结束-->
+
+<!--运动服模态-->
+<div class="modal fade bs-example-modal-lg" id="tKui" tabindex="-1" role="dialog" aria-labelledby="tKui_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="tKui_title">运动服</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbydf.html">
+                            <div class="img">
+                                <img src="../images/run/yDongFu/1.png" alt="">
+                            </div>
+                            <p class="fontColor ">运动服</p>
+                            <hr>
+                            <p class="copy-xsmall">￥900.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbydf.html">
+                            <div class="img">
+                                <img src="../images/run/yDongFu/2.png" alt="">
+                            </div>
+                            <p class="fontColor">运动服</p>
+                            <hr>
+                            <p class="copy-xsmall">￥900.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbydf.html">
+                            <div class="img">
+                                <img src="../images/run/yDongFu/3.png" alt="">
+                            </div>
+                            <p class="fontColor">运动服</p>
+                            <hr>
+                            <p class="copy-xsmall">￥900.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbydf.html">
+                            <div class="img">
+                                <img src="../images/run/yDongFu/4.jpg" alt="">
+                            </div>
+                            <p class="fontColor">运动服</p>
+                            <hr>
+                            <p class="copy-xsmall">￥900.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbydf.html">
+                            <div class="img">
+                                <img src="../images/run/yDongFu/5.jpg" alt="">
+                            </div>
+                            <p class="fontColor">运动服</p>
+                            <hr>
+                            <p class="copy-xsmall">￥900.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbydf.html">
+                            <div class="img">
+                                <img src="../images/run/yDongFu/1.png" alt="">
+                            </div>
+                            <p class="fontColor">运动服</p>
+                            <hr>
+                            <p class="copy-xsmall">￥900.00</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!--腰包模态-->
+
+<div class="modal fade bs-example-modal-lg" id="aQuanSuo" tabindex="-1" role="dialog" aria-labelledby="aQuanSuo_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="aQuanSuo_title">腰包</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbbao.html">
+                            <div class="img">
+                                <img src="../images/run/yBao/1.png" alt="">
+                            </div>
+                            <p class="fontColor">腰包</p>
+                            <hr>
+                            <p class="copy-xsmall">￥600.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbbao.html">
+                            <div class="img">
+                                <img src="../images/run/yBao/2.png" alt="">
+                            </div>
+                            <p class="fontColor">腰包</p>
+                            <hr>
+                            <p class="copy-xsmall">￥600.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbbao.html">
+                            <div class="img">
+                                <img src="../images/run/yBao/2.png" alt="">
+                            </div>
+                            <p class="fontColor">腰包</p>
+                            <hr>
+                            <p class="copy-xsmall">￥600.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbbao.html">
+                            <div class="img">
+                                <img src="../images/run/yBao/3.png" alt="">
+                            </div>
+                            <p class="fontColor">腰包</p>
+                            <hr>
+                            <p class="copy-xsmall">￥600.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbbao.html">
+                            <div class="img">
+                                <img src="../images/run/yBao/4.png" alt="">
+                            </div>
+                            <p class="fontColor">腰包</p>
+                            <hr>
+                            <p class="copy-xsmall">￥600.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbbao.html">
+                            <div class="img">
+                                <img src="../images/run/yBao/5.png" alt="">
+                            </div>
+                            <p class="fontColor">腰包</p>
+                            <hr>
+                            <p class="copy-xsmall">￥600.00</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+<!--发带模态-->
+<div class="modal fade bs-example-modal-lg" id="aQuanDai" tabindex="-1" role="dialog" aria-labelledby="aQuanDai_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="aQuanDai_title">发带</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbfdai.html">
+                            <div class="img">
+                                <img src="../images/run/fDai/2.png" alt="">
+                            </div>
+                            <p class="fontColor">发带</p>
+                            <hr>
+                            <p class="copy-xsmall">￥800.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbfdai.html">
+                            <div class="img">
+                                <img src="../images/run/fDai/3.png" alt="">
+                            </div>
+                            <p class="fontColor">发带</p>
+                            <hr>
+                            <p class="copy-xsmall">￥800.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbfdai.html">
+                            <div class="img">
+                                <img src="../images/run/fDai/4.png" alt="">
+                            </div>
+                            <p class="fontColor">发带</p>
+                            <hr>
+                            <p class="copy-xsmall">￥800.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbfdai.html">
+                            <div class="img">
+                                <img src="../images/run/fDai/5.png" alt="">
+                            </div>
+                            <p class="fontColor">发带</p>
+                            <hr>
+                            <p class="copy-xsmall">￥800.00</p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbfdai.html">
+                            <div class="img">
+                                <img src="../images/run/fDai/6.png" alt="">
+                            </div>
+                            <p class="fontColor">发带</p>
+                            <hr>
+                            <p class="copy-xsmall">￥800.00</p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbfdai.html">
+                            <div class="img">
+                                <img src="../images/run/fDai/7.png" alt="">
+                            </div>
+                            <p class="fontColor">发带</p>
+                            <hr>
+                            <p class="copy-xsmall">￥800.00</p>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+<!--跑鞋模态-->
+<div class="modal fade bs-example-modal-lg" id="pYanXie" tabindex="-1" role="dialog" aria-labelledby="pYanXie_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="pYanXie_title">跑鞋</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbxie.html">
+                            <div class="img">
+                                <img src="../images/run/pXie/1.png" alt="">
+                            </div>
+                            <p class="fontColor">跑鞋</p>
+                            <hr>
+                            <p class="copy-xsmall">￥2500.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbxie.html">
+                            <div class="img">
+                                <img src="../images/run/pXie/2.png" alt="">
+                            </div>
+                            <p class="fontColor">跑鞋</p>
+                            <hr>
+                            <p class="copy-xsmall">￥2500.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbxie.html">
+                            <div class="img">
+                                <img src="../images/run/pXie/3.png" alt="">
+                            </div>
+                            <p class="fontColor">跑鞋</p>
+                            <hr>
+                            <p class="copy-xsmall">￥2500.00</p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbxie.html">
+                            <div class="img">
+                                <img src="../images/run/pXie/4.png" alt="">
+                            </div>
+                            <p class="fontColor">跑鞋</p>
+                            <hr>
+                            <p class="copy-xsmall">￥2500.00</p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbxie.html">
+                            <div class="img">
+                                <img src="../images/run/pXie/5.png" alt="">
+                            </div>
+                            <p class="fontColor">跑鞋</p>
+                            <hr>
+                            <p class="copy-xsmall">￥2500.00</p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center">
+                        <a href="pbxie.html">
+                            <div class="img">
+                                <img src="../images/run/pXie/1.png" alt="">
+                            </div>
+                            <p class="fontColor">跑鞋</p>
+                            <hr>
+                            <p class="copy-xsmall">￥2500.00</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script src="../js/classify.js"></script>
+</body>
+</html>
+

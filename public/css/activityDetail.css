@@ -1,0 +1,91 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+    margin:0; padding:0;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.blog_header{
+    height: 450px;
+    width: 100%;
+    background-image: url("../images/activity/moutain.jpg");
+    background-size:cover;
+    overflow: hidden;
+}
+.blog_header_word{
+    margin-top: 120px;
+    margin-left: 100px;
+}
+
+.blog_header_word p:nth-child(1){
+    color: white;
+    letter-spacing: 2px;
+}
+.blog_header_word h1{
+    color: white;
+    font-size: 60px;
+    font-weight: lighter;
+}
+.blog_header_word p:nth-last-child(1){
+    height: 3px;
+    background-color: #008ca8;
+    width: 240px;
+}
+
+.blog_header_chio{
+    margin-top: 5%;
+    margin-left: 20%;
+    overflow: hidden;
+}
+.detail{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    clear: both;
+}
+.de_up{
+    width: 1100px;
+    margin: 0 auto;
+}
+.de_tittle h1{
+    margin-left: 40%;
+    font-weight: lighter;
+}
+.de_content{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.content_left{
+    float: left;
+    width: 500px;
+}
+.content_right{
+    float: left;
+    width: 500px;
+    margin-left: 30px;
+}
+.content_right p{
+    margin-top: 20px;
+}
+.content_right p span:nth-child(1){
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.content_left p{
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-indent: 13px;
+}

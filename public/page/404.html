@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: black;
+    }
+    .bg{
+        background-image: url("../images/404.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 900px;
+        height: 500px;
+        position: absolute;
+        left:18%;
+        top:16%;
+    }
+
+
+
+
+    .bu1 {
+        width: 150px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: white;
+        border: none;
+        position: relative;
+        left: 374px;
+        top: 252px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    span
+    {
+        color: #068BCA;
+        display: inline-block;
+    }
+    .bu1:hover
+    {
+        background-color:rgb(0,140,168);
+    }
+    .bu1:hover #one{
+        transition: all .3s;
+        animation:one1 .1s ;
+        color: white;
+    }
+    @keyframes one1 {
+        from{transform:translateY(-20px);}
+        to{transform:translateY(20px);}
+    }
+    .bu1:hover #two{
+        transition: all .1s;
+        animation:two1 .2s  ;
+        color: white;
+    }
+    @keyframes two1 {
+        from{transform:translateY(-20px);}
+        to{transform:translateY(20px);}
+    }
+    .bu1:hover  #three{
+        transition: all .1s;
+        animation:three1 .2s  .1s;
+        color: white;
+    }
+    @keyframes three1 {
+        from{transform:translateY(-20px);}
+        to{transform:translateY(20px);}
+    }
+    .bu1:hover #for{
+        transition: all .1s;
+        animation:three1 .3s  ;
+        color: white;
+    }
+    @keyframes for1 {
+        from{transform:translateY(-20px);}
+        to{transform:translateY(20px);}
+    }
+    .bu1:hover #five{
+        transition: all .1s;
+        animation:five1 .2s  .1s;
+        color: white;
+    }
+    @keyframes five1 {
+        from{transform:translateY(-20px);}
+        to{transform:translateY(20px);}
+    }
+    .bu1:hover #six{
+        transition: all .1s;
+        animation:six1 .1s .1s;
+        color: white;
+    }
+    @keyframes six1 {
+        from{transform:translateY(-20px);}
+        to{transform:translateY(20px);}
+    }
+
+</style>
+<body>
+<script src="../jquery"></script>
+<a href="#" onClick="javascript :history.back(-1);">
+    <div class="bg">
+    <button class="bu1">
+        <span id="one">R</span>
+        <span id="two">e</span>
+        <span id="three">t</span>
+        <span id="for">u</span>
+        <span id="five">r</span>
+        <span id="six">n</span>
+    </button>
+</div>
+</a>
+</body>
+</html>

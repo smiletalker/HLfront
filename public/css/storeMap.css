@@ -1,0 +1,324 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+    margin:0; padding:0;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+    /*z-index: 2!important;*/
+    position: absolute  !important;
+    top:-20px !important;
+}
+
+.container{
+    display: block;
+    margin-top:80px;
+}
+
+footer{
+    position: relative !important;
+    margin-top:600px;
+}
+
+.header_img{
+    height: 205px;
+    width: 100%;
+    background-image: url("../images/Repair/5.jpg");
+}
+
+.header_theme{
+    position: absolute;
+    font-size:50px;
+    color:white;
+    font-weight: 200;
+    top:150px;
+    left:150px;
+}
+.header{
+    position: relative;
+    height: 50px;
+    width: 90%;
+    background-color: #1F1F1F;
+    margin: 55px auto;
+}
+
+.header ul{
+    padding-top:10px;
+    margin:10px auto;
+    height: 50px;
+    width:40%;
+}
+.header ul li{
+    float: left;
+    width:16%;
+    height:30px;
+    margin:0 2%;
+    list-style: none;
+    font-size: 14px;
+    color: white;
+}
+.header ul li p{
+    height: 3px;
+    background-color: #008ca8;
+    margin-top: 10px;
+    transition: all .2s linear;
+    width: 0px;
+}
+/*默认选中页面下滑线标识*/
+.header ul li .fifth{
+    width: 55px;
+}
+.header ul li:hover{
+    color:#008ca8;
+    cursor: pointer;
+}
+.header ul li:hover p{
+    width: 55px;
+}
+.header ul li:nth-child(5){
+    position: relative;
+}
+/*默认选中页面下件投诉标识*/
+.header ul li span{
+    position: absolute;
+    color:rgb(29,29,29);
+    font-size:25px;
+    font-weight:500;
+    top:50px;
+    left:15px;
+}
+/*内容*/
+.content{
+    position: absolute;
+    width:90%;
+    margin:5%;
+    height:600px;
+}
+/*左边正文内容*/
+.leftSection{
+    width:75%;
+    float: left;
+    outline:1px solid red;
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 600px;
+    background: rgb(31,29,29);
+    position: relative;
+    /*overflow: hidden;*/
+    border:1px solid rgb(31,29,29);
+    top: 100px;
+}
+#backHead{
+    position: absolute;
+    top: -45px;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.ulD{
+    width: 22%;
+    height: 60%;
+    margin-top: 100px;
+    float: left;
+    margin-left: 3%;
+}
+.ulD>h6{
+    color: white;
+}
+.ulD>ul{
+    margin-top: 30%;
+}
+.ulD>ul>li{
+    list-style: none;
+    margin-top: 5%;
+    transition: all .3s linear;
+}
+.ulD>ul>li>a{
+    color: #999999;
+    text-decoration: none;
+}
+.ulD>p{
+    margin-top: 30%;
+    color: #999;
+}
+.ulD>span{
+    display: inline-block;
+    color: #999999;
+    font-size: 50px;
+    margin-top: 10%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+.ulD>span:hover{
+    color: white;
+}
+#lastD{
+    width: 100%;
+    height: 20%;
+    background: rgb(0,140,168);
+    position: absolute;
+    bottom: 0;
+    /*overflow: hidden;*/
+}
+#lastD>ul{
+    margin-top: 3%;
+    width: 40%;
+    height: 20%;
+    margin-left: 3%;
+}
+#lastD>ul>li{
+    float: left;
+    margin-left: 3%;
+    list-style: none;
+}
+#lastD>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+#lastD>p{
+    color: white;
+    font-size: 12px;
+    margin-left: 4%;
+    margin-top: 1%;
+}
+#lastD>img{
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+    /*width: 15%;*/
+    height: 100px;
+}
+
+#navD{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    background: white;
+}
+/*logo图*/
+#logoW{
+    width: 12%;
+    margin-top: -1.5%;
+
+    margin-left: 5%;
+    position: relative;
+    z-index: 2;
+}
+.BMap_mask{
+    left:-228px !important;
+    width:800px !important;
+    height:600px !important;
+    top:39px !important;
+}
+#mapbox{
+    width:100%;
+    height:415px;
+    position:absolute;
+    font-size:12px;
+    top:500px;
+}
+#mapbox #map{
+    width:100%;
+    height:400px;
+    float:left;
+}
+#mapbox #results{
+    width:250px;
+    margin-top:10px;
+    float:right;
+}
+.mapheader{
+    float:right;
+    overflow:hidden;
+    position: absolute;
+    z-index: 999;
+    right: 40px;
+}
+#searchtext{
+    height: 30px;
+    width: 220px;
+    padding-left: 10px;
+}
+#searchbt{
+    height: 30px;
+    --color: white;
+    --hover: rgb(0,140,168);
+    width: 50px;
+    background-color: black;
+    border-color: black;
+    margin-top: 15px;
+}
+#searchbt:hover, #searchbt:focus {
+    border-color: var(--hover);
+    box-shadow: inset 4em 0 0 0 var(--hover);
+    cursor: pointer;
+    color: white;
+}
+#searchbt{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+#mapbox h2{
+    margin:1px;
+    padding-left:10px;
+    height:20px;
+    line-height:20px;
+    font-size:12px;
+    font-weight:100;
+    background: #008ca8;
+    cursor:move;
+    color: white;
+}
+#mapbox .close{
+    display:block;
+    position:absolute;
+    right:10px; top:0;
+    line-height:22px;
+    text-decoration:none;
+    color:#0000
+}
+.mendian{
+    width: 360px;
+    height: 420px;
+    position: absolute;
+    left: 69px;
+    top: 500px;
+    background-color: #89cca0;
+}
+.mendian ul{
+    list-style: none;
+}
+.mendian ul li{
+    line-height:80px;
+    font-size: 18px;
+    margin-left: 60px;
+    letter-spacing:4px;
+    color: #61617A;
+}
+.mendian ul li:hover{
+    cursor: pointer;
+    color: #33ffca;
+}
+#results{
+    position: absolute;
+    right: 80px;
+    top:60px;
+    background-color: white;
+}

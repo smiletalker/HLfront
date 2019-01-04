@@ -1,0 +1,249 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+    margin:0; padding:0;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+section{
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-top: 110px;
+    width: 100%;
+    height: auto;
+}
+.blog_header{
+    height: 450px;
+    width: 100%;
+    background-image: url("../images/Blog/Sammy_Podhurst_1.jpg");
+    background-size:cover;
+    overflow: hidden;
+}
+.blog_header_word{
+    margin-top: 120px;
+    margin-left: 100px;
+}
+
+.blog_header_word p:nth-child(1){
+    color: white;
+    letter-spacing: 2px;
+}
+.blog_header_word h1{
+    color: white;
+    font-size: 80px;
+    font-weight: lighter;
+}
+.blog_header_word p:nth-last-child(1){
+    height: 3px;
+    background-color: #008ca8;
+    width: 150px;
+}
+
+.blog_header_chio{
+    margin-top: 5%;
+    margin-left: 23%;
+    overflow: hidden;
+}
+.blog_header_chio_ul{
+    height: 50px;
+    width: 800px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 150px
+}
+
+input[type="radio"]{
+    -webkit-appearance:none;
+    width: 16px;
+    height: 16px;
+    border:1px solid white;
+    border-radius: 4px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top:-2px;
+    margin-bottom:1px;
+}
+.blog_header_chio_ul li{
+    float: left;
+    list-style: none;
+    margin-right: 40px;
+}
+.blog_header_chio_ul li:hover{
+    color: #008ca8;
+    cursor: pointer;
+}
+
+.blog_middle_right{
+    position: relative;
+    right: 55px;
+
+}
+.blog_middle_right i{
+    position: absolute;
+    right: 0px;
+    z-index: 10;
+    margin-right: 20px;
+    margin-top: 75px;
+}
+.blog_middle_right input{
+    position: absolute;
+    right: 0px;
+    z-index: 5;
+}
+form input[type=text]{
+    font-family: "FuturaPT-Book", "Helvetica-Light", Helvetica, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    box-sizing: border-box;
+    max-width: none;
+}
+.uk-width-1-1{
+    height:45px;
+    width: 430px;
+    border:solid #999999 1.5px;
+    padding-left: 20px;
+    margin-top: 60px;
+}
+.blog_middle_left{
+    float: left;
+    margin-top: 75px;
+    margin-left: 55px;
+}
+
+.blog_content_header{
+    margin-top: 170px;
+    margin-left: 5%;
+}
+.content_title{
+    float: right;
+    margin-right: 80px;
+}
+.content_title a{
+    color: black;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.blog_content_header p{
+    margin-top: 15px;
+}
+.p1{
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+.p1:hover{
+    cursor: pointer;
+    color: #008ca8;
+}
+.p2{
+    color: rgba(0, 0, 0, 0.68);
+    width: 500px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.p3{
+    font-size: 12px;
+    color: #999999;
+}
+.middle_all{
+    height: 500px;
+    margin-left: 35px;
+}
+.content_middle{
+    margin-top: 55px;
+}
+.content_middle_left{
+    float: left;
+}
+.content_middle_right{
+    float: left;
+    position: relative;
+}
+.middle_left_right{
+    clear: both;
+    width: 150px;
+    margin-left: 500px;
+
+}
+.middle_left_right a{
+    color: black;
+    font-size: 14px;
+}
+.middle_left_right1{
+    position: absolute;
+    right: 20px;
+}
+.middle_left_right1 a{
+    color: black;
+    font-size: 14px;
+}
+.shit1{
+    margin-top: 50px;
+}
+.shit p{
+    margin-top: 15px;
+}
+.content_middle_right ol li{
+    margin-top: 20px;
+    font-size: 14px;
+}
+.content_middle_right ol li a{
+    text-decoration: none;
+    color: black;
+}
+.content_middle_right ol li a:hover{
+    cursor: pointer;
+    color: #008ca8;
+}
+.content_middle_right hr{
+    width: 400px;
+    margin-top: 10px;
+}
+.content_middle_right ol{
+    margin-left: 22px;
+}
+
+/*按钮hover样式*/
+.butHoverCss{
+    --color: white;
+    --hover: rgb(0,140,168);
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    border-color: black;
+    margin-left: 45%;
+}
+.butHoverCss:hover, .butHoverCss:focus {
+    border-color: var(--hover);
+    box-shadow: inset 16em 0 0 0 var(--hover);
+    cursor: pointer;
+    color: white;
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+#search_blog:hover{
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/accountOrder.css">
+</head>
+<body>
+<!--头部-->
+<%-include('common/header.ejs')%>
+
+<!--个人中心-->
+<div class="myCenter floatL">
+    <%-include('common/accountMenuCommon.ejs')%>
+    <div class="rightBox floatR">
+        <p class="myTitle letter">我的订单</p>
+        <div id="leftD">
+            <%for(var i=0;i<order.length;i++){%>
+            <table><!--rules="rows" -->
+                <tr class="borderBtm">
+                    <td rowspan="5" width="14%">
+                        <a href="#">
+                            <img src="<%=order[i].goodsImageSrc%>" alt="">
+                        </a>
+                    </td>
+                    <td width="10%" class="trHead">收件人</td>
+                    <td colspan="2" width="20%" class="trHead">收件人联系方式</td>
+                    <td width="18%" class="trHead">收件人地址</td>
+                    <td colspan="2" width="30%" class="trHead">退货/换货</td>
+                    <td width="1%" class="trHead"><span class="delete iconfont hideOrder">&#xe6ac;</span>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><%=order[i].userName%></td>
+                    <td colspan="2" rowspan="3"><%=order[i].phoneName%></td>
+                    <td rowspan="3"><%=order[i].userOderAddress%></td>
+                    <td colspan="2" rowspan="3">
+                        <button class="buttonC" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            退货</button>
+                        <button class="buttonC" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            换货</button>
+                    </td>
+                    <td rowspan="3"></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr class="borderBtm">
+                </tr>
+                <!--5-->
+                <tr class="borderBtm">
+                    <td class="trHead">单价</td>
+                    <td class="trHead" width="10%">数量</td>
+                    <td class="trHead" width="10%">小计</td>
+                    <td class="trHead" width="12%">订单编号</td>
+                    <td class="trHead" width="12%">下单时间</td>
+                    <td class="trHead" width="12%">订单状态</td>
+                    <td class="trHead"></td>
+                </tr>
+                <tr>
+                    <td class="goodsDec"><%=order[i].goodsName%></td>
+                    <td rowspan="3"><%=order[i].goodsPrice%></td>
+                    <td rowspan="3"><%=order[i].goodsNum%></td>
+                    <td rowspan="3"><%=order[i].goodsPrice*order[i].goodsNum%></td>
+                    <td rowspan="3"><%=order[i].orderId%></td>
+                    <td rowspan="3"><%=order[i].payTime%></td>
+                    <td rowspan="3">
+                        <%if(order[i].isPay == 1 && order[i].isDelivery == 0 && order[i].isArriva == 0){%>
+                                        未发货
+                        <%} else if (order[i].isPay == 0 && order[i].isDelivery == 1 && order[i].isArriva == 0){ %>
+                                        已发货
+                        <%} else if (order[i].isPay == 0 && order[i].isDelivery == 0 && order[i].isArriva == 1){ %>
+                                        已收到
+                        <%}%>
+                    </td>
+                    <td rowspan="3"></td>
+
+                </tr>
+                <tr>
+                    <td class="goodsDec">颜色:<%=order[i].goodsColor%></td>
+                </tr>
+                <tr>
+                    <td class="goodsDec">尺寸:<%=order[i].goodsSize%></td>
+                </tr>
+                <tr><td colspan="8">&nbsp;</td></tr>
+            </table>
+            <%}%>
+            <button class="butHoverCss buttonD">清空订单详情</button>
+        </div>
+    </div>
+</div>
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<!--退还货的模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="modalText">
+                    <table>
+                        <tr>
+                            <td class="trHead" colspan="2">用户名</td>
+                            <td class="trHead" colspan="2">订单编号</td>
+                            <td class="trHead" colspan="2">下单时间</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="40px">付书记</td>
+                            <td colspan="2" height="40px">20180307</td>
+                            <td colspan="2" height="40px">2018-03-07 20:30:54</td>
+                        </tr>
+                        <tr>
+                            <td class="trHead">名称</td>
+                            <td class="trHead">颜色</td>
+                            <td class="trHead">尺寸</td>
+                            <td class="trHead">单价</td>
+                            <td class="trHead">数量</td>
+                            <td class="trHead">小计</td>
+                        </tr>
+                        <tr>
+                            <td width="15%" height="40px">FURIA S.</td>
+                            <td width="15%" height="40px">蓝色</td>
+                            <td width="15%" height="40px">L</td>
+                            <td width="15%" height="40px">￥1000.00</td>
+                            <td width="15%" height="40px">1</td>
+                            <td width="15%" height="40px">￥1000.00</td>
+                        </tr>
+                        <tr>
+                            <td width="15%" height="40px">FURIA S.</td>
+                            <td width="15%" height="40px">蓝色</td>
+                            <td width="15%" height="40px">L</td>
+                            <td width="15%" height="40px">￥1000.00</td>
+                            <td width="15%" height="40px">1</td>
+                            <td width="15%" height="40px">￥1000.00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn butHoverCss" data-dismiss="modal">取消</button>
+                <button type="button" class="btn butHoverCss">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/account.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script>
+    /*左侧菜单被点击后添加类menuClicked*/
+    $(".leftMenu>ul>li:nth-of-type(5)>a").addClass("menuClicked");
+    $(".leftMenu>ul>li:nth-of-type(5)>a:hover").addClass("menuClicked");
+
+    /*隐藏当前行的订单详情*/
+    $(".hideOrder").click(function () {
+        $(this).parent().parent().parent().css("display","none");
+    });
+
+    /*退换货*/
+    $(".buttonC").click(function () {
+        // console.log($(this).html());
+        $(".modal-title").html($(this).html()+"申请");
+        // console.log($(this).parent().parent().parent().parent().html());
+        /*console.log($(this).parent("td").parent("tr").prev("tr").children("td:first-child").children("a").children("img").attr("src"));*/
+
+    });
+
+    /*清除订单列标配*/
+    $(".buttonD").click(function () {
+        $("table").css("display","none");
+        $(this).css("display","none");
+    });
+</script>
+</body>
+</html>

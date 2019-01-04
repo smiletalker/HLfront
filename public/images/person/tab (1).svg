@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="380px" height="45px" viewBox="0 0 379 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="DESKTOP-LAYOUTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-702.000000, -1042.000000)" fill="#1F1D1D">
+            <path d="M702,1085.95801 C708.494792,1085.25618 713.966797,1081.93652 718.416016,1075.99902 C722.865234,1070.06152 729.333333,1060.81608 737.820312,1048.2627 C741.704427,1044.08757 747.942708,1042 756.535156,1042 C765.127604,1042 873.398438,1042.14132 1081.34766,1042.42395 L1081.34766,1086.38196 L702,1085.95801 Z" id="Path-3"></path>
+        </g>
+        <text x="15%" y="70%" fill="#8D8B8B">BACK TO TOP</text>
+		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	        <g stroke="#8D8B8B" stroke-width="2" transform="translate(170, 23)">
+                <g id="ARROW" transform="translate(6.000000, 3.500000) rotate(90.000000) translate(-6.000000, -3.500000) translate(3.000000, -2.000000)">
+                    <polyline id="Path-2" transform="translate(3.000000, 5.422119) scale(-1, 1) translate(-3.000000, -5.422119) " points="3.10862447e-15 0 6 5.5 0.3984375 10.8442383"></polyline>
+	            </g>
+	        </g>
+	    </g>
+    </g>
+</svg>

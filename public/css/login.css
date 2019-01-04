@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+.floatL{
+    float: left;
+}
+.login{
+     width: 98%;
+     height: 500px;
+     /*outline:1px solid #2aabd2;*/
+     margin-left: 1%;
+     margin-right: 1%;
+     float: left;
+     margin-top: 100px;
+     margin-bottom: 60px;
+     position: relative;
+     z-index: 1;
+ }
+.left,.right{
+    float: left;
+    width: 49.5%;
+    height: 400px;
+    /*outline: 1px solid green;*/
+    margin-top: 5%;
+    letter-spacing: 2px;
+}
+.left{
+    border-right: 1px solid #ece3e3;
+}
+.loginTitle,.please,.remember,.subBut,.forgetPwd,.reg{
+    /*outline: 1px solid green;*/
+    float: left;
+    margin-left: 7%;
+    width: 80%;
+}
+/*标题*/
+.loginTitle>span{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginTitle>span:nth-of-type(1){
+    font-size: 24px;
+    font-weight: 400;
+}
+.loginTitle>span:nth-of-type(2){
+    font-size: 18px;
+}
+/*输入框，电子邮件，密码*/
+.pleaseCss{
+    width: 100%;
+    /*outline: 1px solid pink;*/
+    height: 75px;
+}
+.pleaseCss>label,input{
+    float: left;
+    width: 55%;
+    margin-bottom: 6px;
+}
+.pleaseCss>label{
+    font-size: 14px;
+}
+.pleaseCss>input{
+    height: 45px;
+    border: 1px solid black;
+    /*background-color: rgb(250,255,189);*/
+    padding-left: 30px;
+    font-size: 14px;
+}
+.pleaseCss>input:focus{
+    /*border: 1px solid black;*/
+    outline: none;
+}
+.pleaseCss>input[type="password"]{
+    letter-spacing: 8px;
+}
+.redSpan{
+    float: left;
+    margin-left: 5%;
+    line-height: 45px;
+    color: red;
+    font-size: 14px;
+}
+.greenSpan{
+    float: left;
+    margin-left: 5%;
+    line-height: 45px;
+    color: green;
+    font-size: 24px;
+}
+/*记住我*/
+.remember{
+    margin-top: 6px;
+    font-size: 14px;
+    height: 20px;
+}
+/*复选框样式*/
+input[type="checkbox"]{
+    -webkit-appearance:none;
+    width: 13px;
+    height: 13px;
+    /*float: left;*/
+    border:1px solid black;
+    background-color: rgb(255, 255, 255);
+    margin-top: 3px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+}
+input[type="checkbox"]:focus{
+    outline: none;
+}
+input[type="checkbox"]+label{
+    cursor: pointer;
+}
+input[type="checkbox"]:checked::after{
+    content: '\2714';
+    color: rgb(0,140,168);
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.remember>span{
+    margin-left: 30px;
+}
+/*提交按钮*/
+.subBut{
+    margin-top: 15px;
+}
+.mySubmit{
+    width: 80px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.mySubmit:focus{
+    outline: none;
+}
+/*按钮hover样式*/
+.butHoverCss{
+    --color: #fff;
+    --hover: rgb(0,140,168);
+}
+.butHoverCss:hover,.butHoverCss:focus {
+    border-color: var(--hover);
+    color: #fff;
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+/*忘记密码*/
+.forgetPwd{
+    margin-top: 15px;
+}
+.forgetPwd>button{
+    font-size: 14px;
+    text-decoration: underline;
+    border: none;
+    text-align: left;
+}
+.forgetPwd>button:hover{
+    background-color: white;
+    text-decoration: underline;
+}
+.forgetPwd>button:active,
+.forgetPwd>button:link,
+.forgetPwd>button:visited
+{
+    background-color: white!important;
+    box-shadow: 0 0 0 0 white;
+    border: none;
+}
+/*右边版块新用户*/
+#span2{
+    font-size: 14px;
+}
+/*创建一个账户*/
+.reg>a{
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+/*模态框样式修改*/
+.modalEmail{
+    /*outline: 1px solid green;*/
+    width: 100%;
+    height: 150px;
+}
+.modalEmail>span:nth-of-type(1){
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.modalEmail>span:nth-of-type(2){
+    float: left;
+    margin-left: 5%;
+    line-height: 45px;
+    color: red;
+    font-size: 14px;
+}
+.modalEmail>label{
+    float: left;
+    width: 100%;
+}
+#forgetEmail{
+    height: 45px;
+    float: left;
+    letter-spacing: 2px;
+    padding-left: 30px;
+}
+#forgetEmail:focus{
+    outline: none;
+}
+.modal-footer>.btn{
+    border-radius: 0px;
+    color: white;
+    background-color: black;
+}
+.modal-footer>.btn:nth-of-type(1){
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    width: 80px;
+}
+.modal-footer>.btn:nth-of-type(1):hover{
+    color: white;
+    border: 1px solid #008ca8;
+}

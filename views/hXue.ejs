@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑雪</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/pYan.css">
+
+</head>
+<body>
+<!--页头-->
+<%-include('common/header.ejs')%>
+<!--页头结束-->
+
+
+<!--内容-->
+<section class="clearfix">
+
+    <!--筛选列表-->
+    <div class="list">
+        <ul>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span >分类</span><span class="iconfont right">-</span>
+                </div>
+                <ul class="listSub">
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check1"><label for="check1">头盔</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check2"><label for="check2">眼镜</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check3"><label for="check3">滑雪服</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check4"><label for="check4">滑雪鞋</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check5"><label for="check5">滑板</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check6"><label for="check6">手套</label>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </li>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>性别</span><span class="iconfont right">-</span>
+                </div>
+                <ul class="listSub">
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check11"><label for="check11">男装</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check12"><label for="check12">女装</label>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>价钱</span><span class="iconfont right">-</span>
+                </div>
+            </li>
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>主要材料</span><span class="iconfont right">-</span>
+                </div>
+                <ul class="listSub">
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check13"><label for="check13">聚碳酸酯</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" id="check14"><label for="check14">ABS+PC EPS</label>
+                        </a>
+                    </li>
+                </ul>
+            </li >
+            <hr>
+            <li class="listMenu">
+                <div class="listActive">
+                    <span>颜色系列</span><span class="iconfont right">-</span>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <!--商品列表-->
+    <div class="goods">
+        <div class="goodsBottom">
+            <div class="ab">
+                <p class="goodsOder">排序方式:&nbsp;<span class="tHuan">位置</span>&nbsp;<span class="iconfont">&#xe61b;</span> </p>
+                <a href="#">DESC</a>
+                <ul class="seat">
+                    <li>位置</li>
+                    <li>产品名称</li>
+                    <li>价钱</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--头盔-->
+        <div class="xianshi1">
+        <div class="more" id="huaXueTouKui">
+            <a href="#">头盔</a>
+            <a href="#"  data-toggle="modal" data-target="#tKui">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive nan">
+                    <a href="hxmao.html">
+                        <div class="img">
+                            <img src="<%=hx[1][1].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[1][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[1][1].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxmao.html">
+                        <div class="img">
+                            <img src="<%=hx[1][0].src2%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[1][0].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[1][0].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxmao.html">
+                        <div class="img">
+                            <img src="<%=hx[1][1].src3%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[1][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[1][1].price%></p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+
+        <!--眼镜-->
+        <div class="xianshi2">
+        <div class="more" id="huaXueYanJing">
+            <a href="#">眼镜</a>
+            <a href="#" data-toggle="modal" data-target="#aQuanSuo">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive nan">
+                    <a href="hxyjing1.html">
+                        <div class="img">
+                            <img src="<%=hx[3][0].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[3][0].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[3][0].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxyjing.html">
+                        <div class="img">
+                            <img src="<%=hx[3][0].src4%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[3][0].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[3][0].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nv">
+                    <a href="hxyjing.html">
+                        <div class="img">
+                            <img src="<%=hx[3][1].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[3][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[3][1].price%></p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+
+        <!--滑雪服-->
+        <div class="xianshi3">
+        <div class="more" id="huaXueFu">
+            <a href="#">滑雪服</a>
+            <a href="#" data-toggle="modal" data-target="#aQuanDai">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive nv">
+                    <a href="/hxyi.do">
+                        <div class="img">
+                            <img src="<%=hx[0][1].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[0][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[0][1].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxyi1.html">
+                        <div class="img">
+                            <img src="<%=hx[0][2].src2%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[0][2].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[0][2].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxyi.html">
+                        <div class="img">
+                            <img src="<%=hx[0][3].src2%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[0][3].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[0][3].price%></p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+
+
+        <!--滑雪鞋-->
+        <div class="xianshi4">
+        <div class="more" id="huaXueXie">
+            <a href="#">滑雪鞋</a>
+            <a href="#" data-toggle="modal" data-target="#pYanXie">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive nan">
+                    <a href="hxxie.html">
+                        <div class="img">
+                            <img src="<%=hx[2][0].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[2][0].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[2][0].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxxie.html">
+                        <div class="img">
+                            <img src="<%=hx[2][1].src3%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[2][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nv">
+                    <a href="hxxie.html">
+                        <div class="img">
+                            <img src="<%=hx[2][3].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[2][3].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[2][3].price%></p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+
+
+        <!--滑雪板-->
+        <div class="xianshi5">
+        <div class="more" id="huaXueBan">
+            <a href="#">滑板</a>
+            <a href="#" data-toggle="modal" data-target="#pYanShen">更多</a>
+        </div>
+        <div class="goodsList">
+            <ul class="clearfix">
+                <li class="active textActive nan">
+                    <a href="hxban.html">
+                        <div class="img">
+                            <img src="<%=hx[5][1].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[5][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[5][1].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxban.html">
+                        <div class="img">
+                            <img src="<%=hx[5][1].src3%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[5][2].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[5][2].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxban.html">
+                        <div class="img">
+                            <img src="<%=hx[5][1].src2%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[5][3].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[5][3].price%></p>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+        </div>
+        <!--手套-->
+
+        <div class="xianshi6">
+        <div class="more" id="shouTao">
+            <a href="#">手套</a>
+            <a href="#" data-toggle="modal" data-target="#sTao">更多</a>
+        </div>
+        <div class="goodsList">
+
+            <ul class="clearfix">
+                <li class="active textActive nan">
+                    <a href="hxstao.html">
+                        <div class="img">
+                            <img src="<%=hx[4][0].src1%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[4][0].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[4][0].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nv">
+                    <a href="hxstao.html">
+                        <div class="img">
+                            <img src="<%=hx[4][3].src2%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[4][1].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[4][1].price%></p>
+                    </a>
+                </li>
+                <li class="active textActive nan">
+                    <a href="hxstao.html">
+                        <div class="img">
+                            <img src="<%=hx[4][0].src4%>" alt="" >
+                        </div>
+                        <p class="fontColor"><%=hx[4][2].goodsname%></p>
+                        <hr>
+                        <p class="copy-xsmall">￥<%=hx[4][2].price%></p>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+        </div>
+    </div>
+</section>
+<!--内容结束-->
+
+<!--尾部-->
+
+<%-include('common/foot.ejs')%>
+
+<!--尾部结束-->
+
+<!--头盔模态-->
+<div class="modal fade bs-example-modal-lg" id="tKui" tabindex="-1" role="dialog" aria-labelledby="tKui_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="tKui_title">头盔</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxmao.html">
+                            <div class="img">
+                                <img src="<%=hx[1][0].src4%>" alt="" >
+                            </div>
+                            <p class="fontColor "><%=hx[1][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[1][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxmao.html">
+                            <div class="img">
+                                <img src="<%=hx[1][1].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[1][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[1][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxmao.html">
+                            <div class="img">
+                                <img src="<%=hx[1][1].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[1][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[1][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxmao.html">
+                            <div class="img">
+                                <img src="../images/snow/snow_t4.png" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[1][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[1][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxmao.html">
+                            <div class="img">
+                                <img src="../images/snow/snow_t5.png" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[1][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[1][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxmao.html">
+                            <div class="img">
+                                <img src="../images/snow/snow_t6.png" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[1][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[1][0].price%></p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!--眼镜模态-->
+
+<div class="modal fade bs-example-modal-lg" id="aQuanSuo" tabindex="-1" role="dialog" aria-labelledby="aQuanSuo_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="aQuanSuo_title">眼镜</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxyjing1.html">
+                            <div class="img">
+                                <img src="<%=hx[3][1].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[3][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[3][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxyjing.html">
+                            <div class="img">
+                                <img src="<%=hx[3][0].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[3][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[3][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxyjing1.html">
+                            <div class="img">
+                                <img src="<%=hx[3][0].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[3][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[3][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxyjing1.html">
+                            <div class="img">
+                                <img src="<%=hx[3][1].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[3][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[3][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxyjing1.html">
+                            <div class="img">
+                                <img src="<%=hx[3][1].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[3][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[3][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxyjing1.html">
+                            <div class="img">
+                                <img src="<%=hx[3][1].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[3][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[3][1].price%></p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+<!--滑雪服模态-->
+<div class="modal fade bs-example-modal-lg" id="aQuanDai" tabindex="-1" role="dialog" aria-labelledby="aQuanDai_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="aQuanDai_title">滑雪服</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxyi.html">
+                            <div class="img">
+                                <img src="<%=hx[0][2].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[0][2].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[0][2].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxyi1.html">
+                            <div class="img">
+                                <img src="<%=hx[0][3].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[0][3].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[0][3].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxyi.html">
+                            <div class="img">
+                                <img src="<%=hx[0][0].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[0][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[0][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxyi.html">
+                            <div class="img">
+                                <img src="<%=hx[0][1].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[0][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[0][1].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxyi.html">
+                            <div class="img">
+                                <img src="<%=hx[0][3].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[0][3].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[0][3].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxyi.html">
+                            <div class="img">
+                                <img src="<%=hx[0][2].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[0][2].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[0][2].price%></p>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+<!--滑雪鞋模态-->
+<div class="modal fade bs-example-modal-lg" id="pYanXie" tabindex="-1" role="dialog" aria-labelledby="pYanXie_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="pYanXie_title">滑雪鞋</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxxie.html">
+                            <div class="img">
+                                <img src="<%=hx[2][1].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[2][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxxie.html">
+                            <div class="img">
+                                <img src="<%=hx[2][1].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[2][2].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxxie.html">
+                            <div class="img">
+                                <img src="<%=hx[2][1].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[2][3].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxxie.html">
+                            <div class="img">
+                                <img src="<%=hx[2][1].src4%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[2][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxxie.html">
+                            <div class="img">
+                                <img src="<%=hx[2][0].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[2][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxxie.html">
+                            <div class="img">
+                                <img src="<%=hx[2][1].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[2][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[2][1].price%></p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!--滑板模态-->
+<div class="modal fade bs-example-modal-lg" id="pYanShen" tabindex="-1" role="dialog" aria-labelledby="sTao_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="pYanShen_title">滑板</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxban.html">
+                            <div class="img">
+                                <img src="<%=hx[5][1].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[5][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[5][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxban.html">
+                            <div class="img">
+                                <img src="<%=hx[5][1].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[5][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[5][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxban.html">
+                            <div class="img">
+                                <img src="<%=hx[5][1].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[5][2].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[5][2].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxban.html">
+                            <div class="img">
+                                <img src="<%=hx[5][1].src4%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[5][3].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[5][3].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxban.html">
+                            <div class="img">
+                                <img src="<%=hx[5][0].src1%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[5][4].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[5][4].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxban.html">
+                            <div class="img">
+                                <img src="<%=hx[5][0].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[5][5].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[5][5].price%></p>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+<!--手套模态-->
+
+<div class="modal fade bs-example-modal-lg" id="sTao" tabindex="-1" role="dialog" aria-labelledby="sTao_title" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="sTao_title">手套</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="clearfix">
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxstao.html">
+                            <div class="img">
+                                <img src="<%=hx[4][0].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[4][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[4][0].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxstao.html">
+                            <div class="img">
+                                <img src="<%=hx[4][0].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[4][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[4][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nv">
+                        <a href="hxstao.html">
+                            <div class="img">
+                                <img src="<%=hx[4][0].src3%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[4][2].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[4][2].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxstao.html">
+                            <div class="img">
+                                <img src="<%=hx[4][0].src2%>" alt="" >
+                            </div>
+                            <p class="fontColor"><%=hx[4][3].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[4][3].price%></p>
+                        </a>
+                    </li>
+
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxstao.html">
+                            <div class="img">
+                                <img src="<%=hx[4][0].src4%>" >
+                            </div>
+                            <p class="fontColor"><%=hx[4][1].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[4][1].price%></p>
+                        </a>
+                    </li>
+                    <li class="active textActive col-md-4 text-center nan">
+                        <a href="hxstao.html">
+                            <div class="img">
+                                <img src="<%=hx[4][0].src4%>" >
+                            </div>
+                            <p class="fontColor"><%=hx[4][0].goodsname%></p>
+                            <hr>
+                            <p class="copy-xsmall">￥<%=hx[4][0].price%></p>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script src="../js/classify.js"></script>
+<script>
+    $(function () {
+        $("#check1").click(function () {
+            if($(this).prop("checked")==true){
+                $(".xianshi1").hide();
+            }else{
+                $(".xianshi1").show();
+            }
+        }) ;
+        $("#check2").click(function () {
+            if($(this).prop("checked")==true){
+                $(".xianshi2").hide();
+            }else{
+                $(".xianshi2").show();
+            }
+        }) ;
+        $("#check3").click(function () {
+            if($(this).prop("checked")==true){
+                $(".xianshi3").hide();
+            }else{
+                $(".xianshi3").show();
+            }
+        }) ;
+        $("#check4").click(function () {
+            if($(this).prop("checked")==true){
+                $(".xianshi4").hide();
+            }else{
+                $(".xianshi4").show();
+            }
+        }) ;
+        $("#check5").click(function () {
+            if($(this).prop("checked")==true){
+                $(".xianshi5").hide();
+            }else{
+                $(".xianshi5").show();
+            }
+        }) ;
+        $("#check6").click(function () {
+            if($(this).prop("checked")==true){
+                $(".xianshi6").hide();
+            }else{
+                $(".xianshi6").show();
+            }
+        }) ;
+
+        // 性别
+        $("#check11").click(function () {
+         if ($(this).prop("checked")==true){
+             $(".nan").hide();
+         }else{
+             $(".nan").show();
+         }
+        });
+        $("#check12").click(function () {
+            if ($(this).prop("checked")==true){
+                $(".nv").hide();
+            }else{
+                $(".nv").show();
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

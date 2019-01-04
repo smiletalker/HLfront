@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 14px / 20px "FuturaPT-Book", Helvetica, sans-serif;
+}
+ul li {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+img,input {
+    /*vertical-align: bottom!important;*/
+}
+
+label {
+    cursor: pointer;
+    display: inline;
+    max-width: 100%;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.marginAuto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*.clearfix::after,.clearfix::before {*/
+    /*content: "";*/
+    /*display: table;*/
+/*}*/
+
+/*.clearfix::after {*/
+    /*clear: both;*/
+/*}*/
+/*页头*/
+
+
+
+
+
+/*list*/
+
+section {
+    width: 100%;
+
+    margin-top: 150px;
+    margin-bottom: 30px;
+    float: left;
+    position: relative;
+    z-index: 1;
+
+}
+
+.list {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-right:30px;
+}
+
+
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    margin: 15px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.right {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+}
+
+
+.listMenu {
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    position: relative;
+    color:#1F1D1D;
+    font-weight: 700;
+}
+
+.listSub {
+    padding-left: 30px;
+    margin-top: 20px;
+}
+a {
+    font-size: 13px;
+    font-weight: normal;
+    color: #8D8B8B;
+}
+
+a:hover {
+    color: #008ca8;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    background: #fff url("../images/rockClimbing/checkbox.png") no-repeat;
+    width: 12px;
+    height: 12px;
+    background-size: cover ;
+    margin-right: 6px;
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    background: #fff url("../images/rockClimbing/checked.png") no-repeat;
+    background-size: cover ;
+}
+
+/*goods*/
+
+.goods {
+    padding: 0 35px;
+    position: relative;
+    width: 75%;
+    float: left;
+
+}
+
+.goodsBottom {
+    margin-bottom: 50px;
+    /*position: absolute;*/
+    /*right: 30px;*/
+    /*text-align: right;*/
+
+
+}
+
+
+.goodsOder {
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 5px;
+    /*float: right;*/
+
+}
+
+.goodsOder+a {
+    font-size: 10px;
+
+}
+
+.goodsOder,.goodsOder+a {
+    display: inline-block;
+
+}
+.ab {
+    position: absolute;
+    right: 125px;
+}
+.seat {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 150px;
+    padding: 15px;
+    background: #ffffff;
+    color: #1f1d1d;
+    font-size: 13px;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px 0 rgba(141, 139, 139, 0.51);
+    border: 1px solid #1F1D1D;
+    display: none;
+
+}
+
+.seat li {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.seat li:hover {
+    color: #008ca8;
+}
+
+/*头盔*/
+
+.more {
+    margin-bottom: 10px;
+
+}
+
+.more a:first-child {
+    font-size: 24px;
+    color: #1F1D1D;
+    text-decoration: none;
+
+}
+
+.more a:last-child {
+    font-size: 13px;
+    color: #1F1D1D;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.more a:last-child:hover {
+    text-decoration: underline;
+    color: #008ca8;
+}
+
+
+
+
+/*goodsList*/
+
+
+
+.goodsList li {
+    float: left;
+    width: 30%;
+    /*background: #2aabd2;*/
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    /*height: 337px;*/
+}
+
+.img {
+    /*margin:0 auto 15px;*/
+    margin-bottom: 10px;
+
+
+
+}
+
+.img img {
+    width: 234px;
+    /*width: 80%;*/
+    height: 250px;
+    /*height: auto;*/
+    object-fit: contain;
+
+    border: 0;
+
+}
+
+.goodsList hr {
+    width: 60%;
+    /*display: inline-block;*/
+    margin: 0 auto 10px;
+    height: 1px;
+    background-color: #D0D0D0;
+    opacity: 0.35;
+}
+
+.copy-xsmall {
+    color: #444;;
+}
+
+.copy-xsize {
+    font-size: 10px;
+}
+
+
+
+.fontColor {
+    color: #1f1d1d;
+    cursor: pointer;
+}
+
+.fontColor:hover {
+    color: #008ca8;
+}
+
+
+.active {
+    border: none;
+    transition: box-shadow 0.25s ease-in-out;
+    margin-bottom: 20px;
+
+}
+.active:hover {
+    box-shadow: 0 0 8px 0 #666666;
+}
+
+/*.active input[type=checkbox] {*/
+    /*height: 15px;*/
+    /*width: 15px;*/
+/*}*/
+
+footer {
+    float: left;
+}
+
+
+
+
+

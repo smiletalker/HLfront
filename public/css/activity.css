@@ -1,0 +1,171 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+    margin:0; padding:0;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.blog_header{
+    height: 450px;
+    width: 100%;
+    background-image: url("../images/activity/PartnersHeader.jpg");
+    background-size:cover;
+    overflow: hidden;
+}
+.blog_header_word{
+    margin-top: 120px;
+    margin-left: 100px;
+}
+
+.blog_header_word p:nth-child(1){
+    color: white;
+    letter-spacing: 2px;
+}
+.blog_header_word h1{
+    color: white;
+    font-size: 80px;
+    font-weight: lighter;
+}
+.blog_header_word p:nth-last-child(1){
+    height: 3px;
+    background-color: #008ca8;
+    width: 150px;
+}
+
+.blog_header_chio{
+    margin-top: 5%;
+    margin-left: 20%;
+    overflow: hidden;
+}
+
+.acti_h1{
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: lighter;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.acti_h1 a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: lighter;
+}
+.acti_h1 a:hover{
+    color: #008ca8;
+}
+
+.acti_all{
+    height:250px;
+    width: 1200px;
+    clear: both;
+    margin-bottom: 100px;
+    box-shadow: 5px 5px 20px 2px #888888;
+    margin-left: 100px;
+}
+.acti_art1{
+    float: left;
+}
+.acti_art2{
+    float: left;
+    height: 250px;
+    width: 800px;
+}
+.acti_art2_content{
+     margin: 35px;
+}
+.acti_art2_content a{
+    color: black;
+}
+.acti_art2_content h3{
+    font-weight: lighter;
+}
+.art2_content_word{
+    margin-top: 20px;
+}
+
+.our_tittle{
+    margin-left: 37%;
+    margin-bottom: 50px;
+}
+.our_tittle h2{
+    margin-left: 70px;
+    font-weight: lighter;
+}
+/*
+.art_price{
+    position: absolute;
+    float: right;
+    left: 1000px;
+    top: 800px;
+}
+
+.art_price h1{
+    font-weight: lighter;
+    letter-spacing: 4px;
+    color: #999999;
+}
+*/
+
+/*.acti_all_1{
+    height:250px;
+    width: 1200px;
+    box-shadow: 5px 5px 20px 2px #888888;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+.acti_all_2{
+    height:250px;
+    width: 1200px;
+    box-shadow: 5px 5px 20px 2px #888888;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}*/
+/*对模态框进行位置调整*/
+.modal-content{
+    margin-top: 150px;
+}
+#myModalLabel{
+    margin-left: 40%;
+}
+#myModalLabelSecond1{
+    margin-left: 40%;
+}
+#myModalthird1{
+    margin-left: 40%;
+}
+
+.modal-body h4{
+    font-size: 15px;
+}
+/*按钮hover样式*/
+.butHoverCss{
+    --color: white;
+    --hover: rgb(0,140,168);
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    border-color: black;
+    margin-top: 15px;
+}
+.butHoverCss:hover, .butHoverCss:focus {
+    border-color: var(--hover);
+    box-shadow: inset 12em 0 0 0 var(--hover);
+    cursor: pointer;
+    color: white;
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+

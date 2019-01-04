@@ -1,0 +1,153 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+    margin:0; padding:0;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+    /*z-index: 2!important;*/
+    position: absolute  !important;
+    top:-20px !important;
+}
+
+.container{
+    display: block;
+    margin-top:80px;
+}
+
+footer{
+    position: relative !important;
+    margin-top:900px;
+}
+
+.header_img{
+    position: relative;
+    height: 205px;
+    width: 100%;
+    background-image: url("../images/Repair/5.jpg");
+}
+
+.header_theme{
+    position: absolute;
+    font-size:50px;
+    color:white;
+    font-weight: 200;
+    top:70px;
+    left:150px;
+}
+
+.header{
+    position: relative;
+    /*z-index: 4!important;*/
+    height: 50px;
+    width: 90%;
+    background-color: #1F1F1F;
+    margin: 55px auto;
+}
+.header ul{
+    padding-top:10px;
+    margin:10px auto;
+    height: 50px;
+    width:40%;
+}
+
+.header ul li{
+    float: left;
+    width:16%;
+    height:30px;
+    margin:0 2%;
+    list-style: none;
+    font-size: 14px;
+    color: white;
+}
+
+.header ul li p{
+    height: 3px;
+    background-color: #008ca8;
+    margin-top: 10px;
+    transition: all .2s linear;
+    width: 0px;
+}
+
+/*默认选中页面下滑线标识*/
+.header ul li .first{
+    width: 55px;
+}
+
+.header ul li:hover{
+    color:#008ca8;
+    cursor: pointer;
+}
+
+.header ul li:hover p{
+    width: 55px;
+}
+
+.header ul li:nth-child(1){
+    position: relative;
+}
+
+/*默认选中页面下件投诉标识*/
+.header ul li span{
+    position: absolute;
+    color:rgb(29,29,29);
+    font-size:25px;
+    font-weight:500;
+    top:50px;
+    left:15px;
+}
+
+/*内容*/
+.content{
+    position: absolute;
+    width:90%;
+    margin:5%;
+    /*height:1000px;*/
+}
+
+/*左边正文内容*/
+.leftSection{
+    width:75%;
+    margin-bottom: 100px;
+    float: left;
+}
+
+.exchangeTheme,.returnTheme,.otherTheme{
+    font-size:16px;
+    color:#333333;
+}
+
+.returnTheme,.otherTheme{
+    margin-top:70px;
+}
+
+.leftSection ul{
+    margin:30px auto auto 20px;
+}
+
+.leftSection ul li{
+    color:#555555;
+    line-height: 30px;
+    font-size:14px;
+}
+
+
+
+
+

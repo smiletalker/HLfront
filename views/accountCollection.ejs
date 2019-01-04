@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/accountCollection.css">
+</head>
+<body>
+<!--头部-->
+<%-include('common/header.ejs')%>
+
+<!--个人中心-->
+<div class="myCenter floatL">
+    <%-include('common/accountMenuCommon.ejs')%>
+    <div class="rightBox floatR">
+        <p class="myTitle letter">我的收藏</p>
+        <!--<div class="floatL collection">
+            <span class="iconfont floatR colHide">&#xe6ac;</span>
+            <a  class="floatL" href="hxyi.html">
+                <img src="../images/snow/snow_f1.png" alt="">
+            </a>
+            <span class="floatL">滑雪服</span>
+            <span class="floatL">￥150.00</span>
+        </div>-->
+        <%for(var i=0;i<collection.length;i++){%>
+        <div class="floatL collection">
+            <span class="iconfont floatR colHide">&#xe6ac;</span>
+            <a  class="floatL" href="hxyi.html">
+                <img src="<%=collection[i].src1%>"/>
+            </a>
+            <span class="floatL"><%=collection[i].goodsname%></span>
+            <span class="floatL"><%=collection[i].price%></span>
+        </div>
+        <%}%>
+
+    </div>
+</div>
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/account.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script>
+    $(function () {
+        /*左侧菜单被点击后添加类menuClicked*/
+        $(".leftMenu>ul>li:nth-of-type(6)>a").addClass("menuClicked");
+        $(".leftMenu>ul>li:nth-of-type(6)>a:hover").addClass("menuClicked");
+
+        $(".collection").mouseover(function () {
+            $(this).css("boxShadow","0 2px 2px 3px #d2d2d2");
+            $(this).children(".collection>span:nth-of-type(1)").css("visibility","visible");
+        });
+        $(".collection").mouseout(function () {
+            $(this).css("boxShadow","0 2px 2px 3px #fff");
+            $(this).children(".collection>span:nth-of-type(1)").css("visibility","hidden");
+        });
+        $(".colHide").click(function () {
+            $(this).parent(".collection").css("display","none");
+        });
+    });
+</script>
+</body>
+</html>

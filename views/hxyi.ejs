@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/dPs1.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/foot.css">
+  <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+<body>
+<!--页头-->
+<%-include('common/header.ejs')%>
+<!--第一部分-->
+<section class="yi">
+  <!--轮播-->
+  <div class="yi">
+    <div class="lun1">
+      <div class="all">
+        <div class="top-img">
+          <div class="activeimg">
+            <div class="yiEr"><img src="<%=hello[0].src1%>"></div>
+            <div class="yiEr"><img src="<%=hello[0].src2%>"></div>
+            <div class="yiEr"><img src="<%=hello[0].src3%>"></div>
+            <div class="yiEr"><img src="<%=hello[0].src4%>"></div>
+          </div>
+          <div class="left"><img src="../images/rockClimbing/left.png"> </div>
+          <div class="right"><img src="../images/rockClimbing/right.png"></div>
+        </div>
+        <!-- 存放缩略图的容器-->
+        <div class="bot-img">
+          <ul>
+            <li class="active"><img src="<%=hello[0].src1%>"></li>
+            <li><img src="<%=hello[0].src2%>"></li>
+            <li><img src="<%=hello[0].src3%>"></li>
+            <li><img src="<%=hello[0].src4%>"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wen1">
+      <div class="xian1"><b><%=hello[0].goodsname%></b></div><br>
+      <span><%=hello[0].price%></span>人民币<br><br>
+      <!--<div class="iconfont sXin" data-toggle="modal" data-target="#myModa2">&#xe62d;<a class="xiaJa" href="accountCollection.ejs">收藏商品</a></div><br>-->
+      <div class="iconfont sXin" data-toggle="modal" data-target="#myModa2">&#xe62d;收藏商品</div><br>
+      <span class="hua" data-toggle="modal" data-target="#myModal">成为第一个评论该产品</span><br><br>
+      <span class="da"><%=hello[0].des%></span><br><br>
+      <div class="pai">
+        <div class="pai1">尺寸：</div>
+        <div class="pai2">
+          <select class="form-control">
+
+            <option><%=hello[0].size%></option>
+            <option><%=hello[1].size%></option>
+            <option><%=hello[2].size%></option>
+            <option><%=hello[3].size%></option>
+            <option><%=hello[4].size%></option>
+
+          </select>
+        </div>
+        <div class="pai3">颜色：</div>
+        <div class="pai4">
+          <select class="form-control">
+
+            <option><%=hello[0].color%></option>
+
+            <!--<option>灰色</option>-->
+          </select>
+        </div>
+      </div>
+
+
+      <a href="/buycar.ejs"><div class="color1 butHoverCss" data-toggle="modal" data-target="#myModa3" onclick="submitAjax()">添加到购物车</div></a>
+
+      <div class="modal fade" id="myModa3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <!--<h5 class="modal-title" id="myModalLabe3" ><a class="shou" href="accountCollection.ejs">我的收藏</a> </h5>-->
+            </div>
+            <div class="modal-body ju">
+              <h4>该商品已加入购物车</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default butHoverCss" data-dismiss="modal">完成</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h5 class="modal-title" id="myModalLabe2" ><a class="shou" href="accountCollection.ejs">我的收藏</a> </h5>
+            </div>
+            <div class="modal-body ju">
+              <h4>你已收藏该商品</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default butHoverCss" data-dismiss="modal" onclick="accountAjax()"><a href="accountCollection.ejs">完成</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h6 class="modal-title">写自己的评论</h6><p>
+              <h4 class="modal-title" id="myModalLabel">你正在评论：FURIA S.</h4>
+            </div>
+            <div class="modal-body">
+              <!--质量-->
+              <h5 class="modal-title">质量</h5><p>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5星
+                </label>
+                <br><br>
+                <!--价钱-->
+              <h5 class="modal-title">价钱</h5><p>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option1"> 1星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option2"> 2星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio8" value="option3"> 3星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio9" value="option3"> 4星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio10" value="option3"> 5星
+                </label>
+                <br><br>
+                <!--值-->
+              <h5 class="modal-title">值</h5><p>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option1"> 1星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio12" value="option2"> 2星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio13" value="option3"> 3星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio14" value="option3"> 4星
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio15" value="option3"> 5星
+                </label>
+                <br><br>
+                <!--昵称-->
+              <h5 class="modal-title">昵称</h5><p>
+                <input type='text' class="ku1" placeholder="请输入你的昵称"><br><br>
+                <!--摘要-->
+              <h5 class="modal-title">摘要</h5><p>
+                <input type='text' class="ku1" placeholder="请输入你的摘要"><br><br>
+                <!--评论-->
+              <h5 class="modal-title">评论</h5><p>
+                <textarea cols='77' rows='4' placeholder="请填写你的评论："></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default butHoverCss" data-dismiss="modal">提交评论</button>
+              <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+<section class="er">
+  <!--第二部分-->
+  <div class="color2"><span>技术规格</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>技术</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>相关产品</span></div>
+  <div class="xian2">技术规格</div>
+  <!--<table border="0">-->
+    <!--<tr>-->
+      <!--<td>名称： MOVE拉链衫</td>-->
+      <!--<td>材料： PRIMALOFT羊毛混纺面料</td>-->
+      <!--<td></td>-->
+    <!--</tr>-->
+  <!--</table>-->
+  <div>
+    <img src="<%=hello[0].src5%>" class="xin">
+    <img src="<%=hello[0].src6%>" class="xin1">
+    <img src="<%=hello[0].src7%>" class="xin2">
+    <img src="<%=hello[0].src8%>" class="xin3">
+  </div>
+  <div class="xian3"></div>
+</section>
+<!--第三部分-->
+<section class="san">
+  <div class="xian2">技术</div>
+  <div class="zhi">
+    <img class="zhi1" src="../images/rockClimbing/ccc.png">
+    <img class="zhi2" src="../images/rockClimbing/aaa.png">
+  </div>
+  <div class="xian4"></div>
+</section>
+<!--第五部分-->
+<section class="wu">
+  <div class="xian2">我们保证</div>
+  <div class="bei1">
+    <div class="iconfont wirte">&#xe669;</div>
+    <div class="bei11"><a href="Repair.html">保护和维修</a> </div>
+    <div class="bei12">
+      我们支持我们的产品。如果你在材料或工艺方面遇到任<br>
+      何缺陷，请知道我们为你提供保险。
+    </div>
+  </div>
+  <div class="bei2">
+    <div class="iconfont wirte">&#xe642;</div>
+    <div class="bei11"><a href="returns.html">运输和退货</a></div>
+    <div class="bei12">
+      送货和退货是免费的
+    </div>
+    <div class="bei13">
+      所有零售客户均可获得免费送货，并且订单超过100元<br>
+      即可返回48元。
+    </div>
+  </div>
+  <div class="bei3">
+    <div class="iconfont wirte">&#xe66a;</div>
+    <div class="bei11"><a href="service.html">服务中心</a></div>
+    <div class="bei12">
+      你知道JIDAO在博尔德有一个完整的维修和服务中心<br>
+      吗？
+    </div>
+    <div class="bei14">
+      我们希望你的产品能够持续很长时间，并始终在这里帮<br>
+      助你保养装备，并修复在此过程中发生的任何损坏。
+    </div>
+  </div>
+  <div class="xian6"></div>
+</section>
+<!--第六部分-->
+<section class="liu">
+  <div class="xian10">相关产品</div>
+  <div class="goodsList">
+    <ul class="clearfix">
+      <li class="active textActive">
+        <a href="#">
+          <div class="img">
+            <img src="../images/rockClimbing/crash/7.png" alt="">
+          </div>
+          <p class="fontColor">攀岩帽</p>
+          <hr>
+          <p class="copy-xsmall">￥150.00</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--<div class="clearfix"></div>-->
+<%-include('common/foot.ejs')%>
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script src="../js/detailsPageOme.js"></script>
+<script>
+function submitAjax() {
+    $.ajax({
+        type: "GET",//提交类型
+        url: "/buycar.ejs",//提交地址
+        data: {//传参
+            name: "<%=hello[0].goodsname%>",
+            price1: "<%=hello[0].price%>",
+            tu: "<%=hello[0].src1%>",
+            si: "<%=hello[0].size%>",
+            co: "<%=hello[0].color%>",
+            ki: "<%=hello[0].goodsKind%>",
+            gid: "<%=hello[0].goodsId%>",
+            uid: "<%=hello[0].userId%>"
+        },
+//        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        },
+        err: function (data) {
+            console.log(data);
+        }
+
+    })
+}
+function accountAjax(){
+    $.ajax({
+        type: "GET",//提交类型
+        url: "/accountCollection.ejs",//提交地址
+        data: {//传参
+            ki: "<%=hello[0].goodsKind%>",
+            gid: "<%=hello[0].goodsId%>",
+            uid: "<%=hello[0].userId%>"
+        },
+//        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        },
+        err: function (data) {
+            console.log(data);
+        }
+
+    })
+}
+</script>
+</body>
+</html>

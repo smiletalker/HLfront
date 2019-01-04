@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地址管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/accountAddr.css">
+</head>
+<body>
+<!--头部-->
+<%-include('common/header.ejs')%>
+
+<!--个人中心-->
+<div class="myCenter floatL myMsg">
+    <%-include('common/accountMenuCommon.ejs')%>
+    <div class="rightBox floatR">
+        <p class="myTitle letter">新增地址</p>
+        <div id="msg addr">
+            <form id="myAddrForm">
+                <!--地址类别修改-->
+                <div class="myMsgInput floatL myAddr">
+                    <label class="floatL letter addrCategory" for="addrCategory">地址类别</label>
+                    <select class="floatL letter" name="addrCategory" id="addrCategory" onchange="selectAddr()">
+                        <option value="0">请选择地址类别</option>
+                        <option value="1">账单地址</option>
+                        <option value="2">收货地址</option>
+                    </select>
+                    <span class="floatL letter"></span>
+                </div>
+                <!--用户名输入框-->
+                <div class="myMsgInput floatL myAddr">
+                    <label class="floatL letter" for="addrName">名字</label>
+                    <input type="text" class="floatL letter" id="addrName" name="addrName" onblur="checkName(this,'请输入您的名字')" placeholder="请输入您的名字">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--联系方式-->
+                <div class="myMsgInput floatL myAddr">
+                    <label class="floatL letter" for="addrTel">联系方式</label>
+                    <input type="text" class="floatL letter" id="addrTel" name="addrTel"
+                           onblur="checkPhone(this,'请输入您的联系方式')" placeholder="请输入您的联系方式">
+                    <span class="floatL letter"></span>
+                </div>
+                <!--地址-->
+                <div class="myMsgInput floatL myAddr" id="addrManage" style="height: 120px;">
+
+                    <div class="myAddrInput floatL" data-toggle="distpicker">
+                        <label class="floatL letter" for="addrProvince">请选择地址</label>
+                        <select class="floatL letter" name="addrProvince" id="addrProvince" data-province="-选择省-"></select>
+                        <select class="floatL letter" name="addrCity" id="addrCity" data-city="-选择市-"></select>
+                        <select class="floatL letter" name="addrDistrict" id="addrDistrict" data-district="-选择区-"></select>
+
+                    </div>
+
+                    <div class="myMsgInput">
+                        <label class="floatL letter" for="addrDetails">详细地址</label>
+                        <input type="text" class="floatL letter" id="addrDetails" name="addrDetails"
+                               onblur="checkAddr(this,'请输入您的详细地址')" placeholder="请输入您的详细地址">
+                        <span class="floatL letter"></span>
+                    </div>
+                </div>
+                <!--提交按钮-->
+                <button type="button" class="floatL letter butAddr butHoverCss"
+                        onclick="updateAddr()">提交</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/account.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script src="../js/accountAddr.js"></script>
+<script type="text/javascript" src="../js/distpicker.js"></script>
+<script>
+    /*左侧菜单被点击后添加类menuClicked*/
+    $(".leftMenu>ul>li:nth-of-type(4)>a").addClass("menuClicked");
+    $(".leftMenu>ul>li:nth-of-type(4)>a:hover").addClass("menuClicked");
+</script>
+</body>
+</html>

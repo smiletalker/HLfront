@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# Cache manifest version 1.0.0
+# RM Pano viewer 1.0.0
+# Copyright (c) 2007-2011 http://www.86rm.com/
+
+idle.html
+rmpano.js
+rmpano.license.js
+img/idle.js
+img/control/icon.png
+img/control/button.png
+img/cube/2/f.jpg
+img/cube/2/r.jpg
+img/cube/2/b.jpg
+img/cube/2/l.jpg
+img/cube/2/u.jpg
+img/cube/2/d.jpg
+img/cube/2/preview.jpg

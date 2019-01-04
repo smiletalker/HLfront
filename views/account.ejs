@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/foot.css">
+</head>
+<body>
+<!--头部-->
+<%-include('common/header.ejs')%>
+
+<!--个人中心-->
+<div class="myCenter floatL">
+    <%-include('common/accountMenuCommon.ejs')%>
+    <div class="rightBox floatR">
+        <p class="myTitle letter">账户信息中心</p>
+        <!--信息中心-->
+        <div class="msg">
+            <p class="floatL letter" id="accountMsg">账户信息</p>
+            <div class="msgTopL floatL">
+                <span class="floatL letter">联系信息</span>
+                <span class="floatL letter getUserName"><%=userMsg[0].userName%></span>
+                <span class="floatL letter getUserPhone"></span>
+                <span class="floatL letter getEmail"><%=userMsg[0].userEmail%></span>
+                <a href="accountMsg.do" class="floatL">编辑</a>
+                <a href="accountMsg.do?checkBoxState=true" class="floatL">修改密码</a>
+            </div>
+            <div class="msgTopR floatL">
+                <span  class="floatL letter">简讯</span>
+                <span  class="floatL letter">您没有订阅我们的时事通讯。</span>
+                <a href="#" class="floatL">编辑</a>
+            </div>
+        </div>
+        <!--地址管理-->
+        <div class="msg" id="addrManage">
+            <p class="floatL letter">
+                地址信息
+                <a href="accountAddr.do?myType=1" class="addAddr">新增地址</a>
+            </p>
+
+            <div class="msgTopL floatL">
+                <span class="floatL letter">账单地址</span>
+                <%for(var i=0;i<userMsg.length;i++){%>
+                <div class="floatL getAddr">
+                    <%if (i==0){ %>
+                        <span class="floatL letter" style="display: block;">默认</span>
+                    <%}else {%>
+                            <span class="floatL letter" style="visibility:hidden;">默认</span>
+                        <%}%>
+
+                    <span class="floatL letter gatAddr"><%=userMsg[i].userAddr%></span>
+                    <span class="floatL" onclick="addrOpen(this)">+</span>
+                    <p role="button" class="floatL btn btn-default" data-toggle="modal" data-target="#myModal" onclick="getAddress(this)">编辑</p>
+                    <span class="floatL letter getName">收件人：<span><%=userMsg[i].userAddrName%></span></span>
+                    <span class="floatL letter getTel">联系方式：<span><%=userMsg[i].phoneName%></span></span>
+                </div>
+                <%}%>
+            </div>
+            <div class="msgTopR floatL">
+                <span  class="floatL letter">送货地址</span>
+                <div class="floatL getAddr">
+                    <span class="floatL letter">默认</span>
+                    <span class="floatL letter">四川省成都市天府二街1325号</span>
+                    <span class="floatL" onclick="addrOpen(this)">+</span>
+                    <p role="button" class="floatL btn btn-default" data-toggle="modal" data-target="#myModal">编辑</p>
+                    <span class="floatL letter">收件人：陈小姐</span>
+                    <span class="floatL letter">联系方式：13100265988</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--尾部-->
+<%-include('common/foot.ejs')%>
+
+<!--编辑地址的模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">修改地址信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modalEmail">
+                    <div>
+                        <label for="myAddress" class="floatL">地址</label>
+                        <input type="text" class="floatL" id="myAddress" name="myAddress" oldValue="" onblur="checkAddress(this,'请填写您的收货地址')" placeholder="请填写您的地址信息">
+                        <span class="floatL"></span>
+                    </div>
+                    <div>
+                        <label for="receiverName" class="floatL">姓名</label>
+                        <input type="text" id="receiverName" class="floatL" name="receiverName" oldValue="" onblur="checkName(this,'请填写您的收货人姓名')" placeholder="请填写收货人姓名">
+                        <span class="floatL"></span>
+                    </div>
+                    <div>
+                        <label for="receiverTel" class="floatL">联系方式</label>
+                        <input type="text" id="receiverTel" class="floatL" name="receiverTel" oldValue="" onblur="checkTel(this,'请填写收货人的联系方式')" placeholder="请填写收货人联系方式">
+                        <span class="floatL"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn butHoverCss" data-dismiss="modal">取消</button>
+                <button type="button" class="btn butHoverCss" onclick="saveAddrMsg()">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/account.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/foot.js"></script>
+<script>
+    $(function () {
+        /*左侧菜单被点击后添加类menuClicked*/
+        $(".leftMenu>ul>li:nth-of-type(2)>a").addClass("menuClicked");
+        $(".leftMenu>ul>li:nth-of-type(2)>a:hover").addClass("menuClicked");
+
+        /*将用户名存在本地*/
+        sessionStorage.setItem("myUserName","<%=userMsg[0].userName%>");
+        <!--sessionStorage.setItem("myUserTel","<%=userMsg[0].userEmail%>");-->
+
+        $(".getUserPhone").html(sessionStorage.getItem("myUserPhone"));
+
+    })
+
+
+    /*点编辑获取当前行的地址信息*/
+    function getAddress(obj) {
+        $("#myAddress").val($(obj).prev().prev().html());
+        $("#receiverName").val($(obj).next().children().html());
+        $("#receiverTel").val($(obj).next().next().children().html());
+
+        $("#myAddress").attr("oldValue",$(obj).prev().prev().html());
+        $("#receiverName").attr("oldValue",$(obj).next().children().html());
+        $("#receiverTel").attr("oldValue",$(obj).next().next().children().html());
+
+    }
+
+    /*保存修改的地址信息*/
+    function saveAddrMsg() {
+        $.ajax({
+            type:"GET",
+            url:"/updateAddr.do",
+            data:{
+                myAddress:$("#myAddress").val(),
+                receiverName:$("#receiverName").val(),
+                receiverTel:$("#receiverTel").val(),
+                oldMyAddress:$("#myAddress").attr("oldValue"),
+                oldReceiverName:$("#receiverName").attr("oldValue"),
+                oldReceiverTel:$("#receiverTel").attr("oldValue")
+            },
+            success:function (data) {
+                // console.log("修改成功");
+                // window.reload();
+            },
+            error:function (data) {
+                // console.log(data);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

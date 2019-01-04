@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*左浮动*/
+.floatL{
+    float: left;
+}
+/*右浮动*/
+.floatR{
+    float: right;
+}
+/*字体间距*/
+.letter{
+    letter-spacing: 2px;
+}
+/*注册*/
+.register{
+    width: 100%;
+    height: 700px;
+    /*outline: 1px solid green;*/
+    float: left;
+    margin-top: 150px;
+    margin-bottom: 130px;
+    position: relative;
+    z-index: 1;
+}
+/*个人信息*/
+.personalMsg{
+    width: 94%;
+    height: 600px;
+    /*outline: 1px pink solid;*/
+    margin: 0 3%;
+
+}
+.personalMsg>p{
+    width: 100%;
+    border-bottom: 1px solid #ece3e3;
+    padding-bottom: 3px;
+    /*outline: 1px solid #ff1c28;*/
+}
+.msgInput{
+    width: 100%;
+}
+.personalMsg>p{
+    font-size: 20px;
+}
+.msgInput{
+    height: 540px;
+    margin-top: 30px;
+}
+/*表单*/
+form{
+    width: 100%;
+    height: 540px;
+    /*outline: 1px solid blue;*/
+}
+form>div{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 50px;
+}
+form>div>label{
+    width: 100%;
+    margin-bottom: 5px;
+}
+form>div>input{
+    height: 45px;
+    width: 30%;
+    padding-left: 30px;
+}
+form>div>input:focus{
+    outline: none;
+}
+.redSpan{
+    line-height: 45px;
+    margin-left: 3%;
+    color: red;
+    display: block;
+}
+.greenSpan{
+    line-height: 45px;
+    margin-left: 3%;
+    color:green;
+    font-Size:14px;
+    display: block;
+}
+/*验证码内容的div*/
+form>div>div{
+    display: inline-block;
+    height: 45px;
+    width: 120px;
+    border: 1px solid #c4bbbb;
+    margin-left: 3%;
+    line-height: 45px;
+    text-align: center;
+    font-size: 20px;
+}
+/*记住我*/
+.remember{
+    margin-top: -20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    height: 20px;
+}
+/*复选框样式*/
+input[type="checkbox"]{
+    -webkit-appearance:none;
+    width: 13px;
+    height: 13px;
+    /*float: left;*/
+    border:1px solid black;
+    background-color: rgb(255, 255, 255);
+    margin-top: 3px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+}
+input[type="checkbox"]:focus{
+    outline: none;
+}
+input[type="checkbox"]+label{
+    cursor: pointer;
+}
+input[type="checkbox"]:checked::after{
+    content: '\2714';
+    color: rgb(0,140,168);
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.remember>label{
+    width: 50px;
+}
+.remember>span{
+    color: black;
+}
+/*验证码*/
+#verifyCode{
+    width: 15%;
+}
+#refreshCode{
+    margin-top: 5px;
+    margin-left: 3%;
+    width: 80px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+#refreshCode:hover{
+    color: white;
+    border:1px solid #008ca8;
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+/*提交按钮*/
+.subBut{
+    margin-top: 15px;
+}
+.mySubmit{
+    width: 150px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.mySubmit:focus{
+    outline: none;
+}
+.subBut>a{
+    color: black;
+    margin-left: 3%;
+    margin-top: 15px;
+}
+/*按钮hover样式*/
+.butHoverCss{
+    --color: #fff;
+    --hover: rgb(0,140,168);
+}
+.butHoverCss:hover,.butHoverCss:focus {
+    border-color: var(--hover);
+    color: #fff;
+    box-shadow: inset 11em 0 0 0 var(--hover);
+}
+.butHoverCss{
+    color: var(--color);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
