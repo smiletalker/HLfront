@@ -3,10 +3,10 @@ const mysql=require("mysql");
 const dbPool={
     pool:{},
     config:{
-        host:"localhost",
+        host:"120.77.251.109",
         port:"3306",
         user:"root",
-        password:"root",
+        password:"123456fjf",
         database:"jd",
         dateStrings:true// 强制日期类型(TIMESTAMP, DATETIME, DATE)以字符串返回，而不是一javascript Date对象返回. (默认: false)
     },
